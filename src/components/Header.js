@@ -11,8 +11,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex', 
         justifyContent: 'center', 
-        alignItems: 'center',
         height: '100vh',
+        fontFamily: 'Alef',
+        fontSize: '3rem',
     },
     appBarClass: {
         background: 'rgba(0, 0, 0, 0)', 
@@ -20,7 +21,23 @@ const useStyles = makeStyles((theme) => ({
     toolBarSort: {
         // puts it to the right of the screen. marginRight puts it to the left. 
         marginLeft: 'auto', 
-    }, 
+    },
+    container: {
+        justifyContent: 'right',
+        alignItems: 'right',
+    },
+    title: {
+        "width": "481px",
+        "height": "41px",
+        "fontFamily": "Alef",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+        "fontSize": "10 rem",
+        "lineHeight": "80%",
+
+        "letterSpacing": "-0.045em",
+        "color": "#FFFFFF"
+    }
 
 }))
 
@@ -42,8 +59,9 @@ export default function Header() {
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>
-            <h1> Campfire <br /> Convos.</h1>
-            
+            <div className={classes.container}>
+                <h1 className={classes.title}> campfire <br /> convos</h1>
+            </div>
             
         </div>
     )
