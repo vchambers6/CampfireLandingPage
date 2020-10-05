@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
             flexDirection: 'column', 
         },
     },
+    titleWrapper: {
+        margin: '3rem',
+    },
     title: {
         fontFamily: 'Alef',
         fontSize: '6rem',

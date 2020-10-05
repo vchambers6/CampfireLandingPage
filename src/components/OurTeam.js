@@ -32,7 +32,7 @@ export default function() {
         <div className={classes.root}>
             <div className={classes.titleWrapper}>
                 <h1 className={classes.title}>our team</h1>
-                <h3>we're a group of students who believe in the power of connection.</h3>
+                <h3>who believe in the power of connection. just testing out the text:-)</h3>
             </div>
     
         </div>
