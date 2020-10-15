@@ -5,6 +5,8 @@ import { CssBaseline, Grid } from '@material-ui/core';
 import useWindowPosition from '../hook/useWindowPosition';
 import teamMembers from "../static/teamMembers";
 import TeamMemberCard from './TeamMemberCard';
+import TagArray from './TagArray';
+import teamMemberTags from "../static/teamMemberTags";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,8 +33,8 @@ const useStyles = makeStyles((theme) => ({
 export default function() {
     const classes = useStyles();  
     return (
+        
         <div className={classes.root} id="ourTeam">
-            
             <Grid 
                 container
                 spacing={6}
@@ -46,25 +48,24 @@ export default function() {
                 </div>
                 </Grid>
 
-                <Grid item xs={4}>
-                    <TeamMemberCard member={teamMembers[0]} />
+                <Grid item md={4} sm={6} xs={12}>
+                    <TeamMemberCard member={teamMembers[0]}/>
+                    
                 </Grid>
 
-                <Grid item xs={4}>
+                <Grid item md={4} sm={6} xs={12}>
                     <TeamMemberCard member={teamMembers[1]} />
                 </Grid>
 
-                <Grid item xs={4}>
+                <Grid item md={4} sm={6} xs={12}>
                     <TeamMemberCard member={teamMembers[2]} />
                 </Grid>
 
-                <Grid item xs={4}>
+                <Grid item md={4} sm={6} xs={12}>
                     <TeamMemberCard member={teamMembers[3]} />
                 </Grid>
 
-                
-
-                <Grid item xs={4}>
+                <Grid item md={4} sm={6} xs={12}>
                     <TeamMemberCard member={teamMembers[4]} />
                 </Grid>
             </Grid>

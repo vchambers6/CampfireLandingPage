@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     width: '100vw',
+    // this got rid of excess in fullscreen
     overflowX: 'hidden',
   },
 })); 
