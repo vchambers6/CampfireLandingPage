@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 export default function() {
     const classes = useStyles();  
     return (
-        <div className={classes.root}>
+        <div className={classes.root} id="about">
             <h1 className={classes.title}>about</h1>
         </div>
     )
