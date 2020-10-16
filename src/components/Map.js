@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("md")]: {
             flexDirection: 'column', 
         },
+        textAlign: 'center',
     },
     titleWrapper: {
         margin: '3rem',
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
     title: {
         fontFamily: 'Alef',
-        fontSize: '6rem',
+        fontSize: '4.5rem',
         margin: '-1rem',
         color: 'white',
     },
@@ -33,6 +34,8 @@ export default function() {
             <div className={classes.titleWrapper}>
                 <h1 className={classes.title}>map of schools we're at</h1>
             </div>
+
+            
         </div>
     )
 }

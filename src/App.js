@@ -4,9 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import Header from './components/Header';
 import About from './components/About';
-import Map from './components/Map';
+
 import OurTeam from './components/OurTeam';
 import Contact from './components/Contact';
+import MapTest from './components/MapTest';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,7 +30,9 @@ export default function App() {
       <CssBaseline />
       <Header />
       <About />
-      <Map />
+      {/* THIS DIDN'T WORK
+      <MapTest /> 
+      */}
       <OurTeam />
       <Contact />
     </div>

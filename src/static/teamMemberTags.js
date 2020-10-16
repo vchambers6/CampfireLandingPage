@@ -117,7 +117,7 @@ const TeamMemberTags = [
             color: "#4aa564", 
         },
         {
-            title: "CT/CST", 
+            title: "CDT/CST", 
             color: "#ff6b84",
         },
         {
