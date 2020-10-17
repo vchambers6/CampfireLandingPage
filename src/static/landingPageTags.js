@@ -4,123 +4,129 @@ student orgs - #00a6d2
 locations - #ff6b84
 identity/experience - #f9c642
 */
+
+const academics = '#4aa564';
+const orgs = '#00a6d2';
+const locations = '#ff6b84'; 
+const idExp = '#f9c642';
+
 const landingPageTags = [
     // Anri
     {
         title: "MATH101",
-        color: "#4aa564",
+        color: academics,
     }, 
     {
         title: "Study Abroad",
-        color: "#f9c642",
+        color: idExp,
     }, 
     {
         title: "Widener Library",
-        color: "#ff6b84",
+        color: locations,
     }, 
     {
         title: "Vegan",
-        color: "#f9c642",
+        color: idExp,
     }, 
     {
         title: "Students with Disability",
-        color: "#4aa564",
+        color: idExp,
     }, 
     {
         title: "PST/PDT",
-        color: "#ff6b84",
+        color: locations,
     }, 
     {
         title: "Feminism",
-        color: "#f9c642",
+        color: idExp,
     }, 
     {
         title: "Career Networking",
-        color: "#4aa564",
+        color: academics,
     }, 
     {
         title: "DACA",
-        color: "#f9c642",
+        color: idExp,
     }, 
     {
         title: "Club Basketball",
-        color: "#00a6d2",
+        color: orgs,
     }, 
     {
         title: "Intro Swahili",
-        color: "#4aa564",
+        color: academics,
     }, 
     {
         title: "Mardi Gras", 
-        color: "#f9c642",
+        color: idExp,
     },
     {
         title: "Financial Literacy", 
-        color: "#f9c642",
+        color: idExp,
     },
     {
         title: "Indigenous Peoples", 
-        color: "#f9c642",
+        color: idExp,
     },
     {
         title: "Astrophysics", 
-        color: "#4aa564",
+        color: academics,
     },
     {
         title: "LGBTQ+",
-        color: "#f9c642",
+        color: idExp,
     }, 
     {
         title: "Unstable Wifi",
-        color: "#f9c642",
+        color: idExp,
     }, 
     {
         title: "Intersectionality",
-        color: "#f9c642",
+        color: idExp,
     }, 
     {
         title: "LSAT",
-        color: "#4aa564",
+        color: academics,
     }, 
     {
         title: "Running and Triathlon Club",
-        color: "#00a6d2",
+        color: orgs,
     }, 
     {
         title: "California",
-        color: "#ff6b84",
+        color: locations,
     }, 
     {
         title: "Buddhist",
-        color: "#f9c642",
+        color: idExp,
     }, 
     {
         title: "Venture Capital",
-        color: "#f9c642",
+        color: idExp,
     }, 
     {
         title: "Chuseok",
-        color: "#f9c642",
+        color: idExp,
     }, 
     {
         title: "Art History",
-        color: "#4aa564",
+        color: academics,
     }, 
     {
         title: "Black Student Union",
-        color: "#00a6d2",
+        color: orgs,
     }, 
     {
         title: "International Students",
-        color: "#f9c642",
+        color: idExp,
     }, 
     {
         title: "Hackathons",
-        color: "#f9c642",
+        color: idExp,
     }, 
     {
         title: "Intramural Sports",
-        color: "#00a6d2",
+        color: orgs,
     }, 
 ];
 

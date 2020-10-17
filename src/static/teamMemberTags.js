@@ -4,28 +4,34 @@ student orgs - #00a6d2
 locations - #ff6b84
 identity/experience - #f9c642
 */
+
+const academics = '#4aa564';
+const orgs = '#00a6d2';
+const locations = '#ff6b84';
+const idExp = '#f9c642';
+
 const TeamMemberTags = [
     [
         // Anri
         {
             title: "EST/EDT",
-            color: "#ff6b84",
+            color: locations,
         }, 
         {
             title: "Second Generation Immigrant", 
-            color: "#f9c642",
+            color: idExp,
         },
         {
             title: "Astronomy", 
-            color: "#4aa564",
+            color: academics,
         },
         {
             title: "Toronto Blue Jays", 
-            color: "#f9c642",
+            color: idExp,
         },
         {
             title: "Mandarin", 
-            color: "#f9c642",
+            color: idExp,
         },
     ],
 
@@ -33,104 +39,104 @@ const TeamMemberTags = [
         // Jenny 
         {
             title: "Neuroscience",
-            color: "#4aa564",
+            color: academics,
         }, 
         {
             title: "Chinese Dance", 
-            color: "#f9c642",
+            color: idExp,
         },
         {
             title: "Harvard Class of 2022", 
-            color: "#4aa564", 
+            color: academics, 
         },
         {
             title: "Currier", 
-            color: "#ff6b84",
+            color: locations,
         },
         {
             title: "Career Networking", 
-            color: "#f9c642",
+            color: idExp,
         },
         {
             title: "French Open", 
-            color: "#f9c642",
+            color: idExp,
         },
     ],
 
     [
         {
             title: "First Generation Immigrant",
-            color: "#f9c642",
+            color: idExp,
         }, 
         {
             title: "Skiing", 
-            color: "#f9c642",
+            color: idExp,
         },
         {
             title: "Seattle", 
-            color: "#ff6b84",
+            color: locations,
         },
         {
             title: "Women in Tech", 
-            color: "#f9c642",
+            color: idExp,
         },
         {
             title: "Korean", 
-            color: "#f9c642",
+            color: idExp,
         },  
     ],
 
     [
         {
             title: "Women in Computer Science",
-            color: "#00a6d2",
+            color: orgs,
         }, 
         {
             title: "Vegan", 
-            color: "#f9c642",
+            color: idExp,
         },
         {
             title: "Harvard Class of 2024", 
-            color: "#4aa564", 
+            color: academics, 
         },
         {
             title: "California", 
-            color: "#ff6b84",
+            color: locations,
         },
         {
             title: "Social Justice", 
-            color: "#f9c642",
+            color: idExp,
         },
         {
             title: "STAT 110", 
-            color: "#4aa564",
+            color: academics,
         },
     ],
 
     [
         {
             title: "Language Learning",
-            color: "#f9c642",
+            color: idExp,
         }, 
         {
             title: "Harvard Class of 2023", 
-            color: "#4aa564", 
+            color: academics, 
         },
         {
             title: "CDT/CST", 
-            color: "#ff6b84",
+            color: locations,
         },
         {
             title: "BIPOC", 
-            color: "#f9c642",
+            color: idExp,
         },
         {
             title: "Animation", 
-            color: "#4aa564",
+            color: academics,
         },
         {
             title: "MIT Gymnastics", 
-            color: "#00a6d2",
+            color: orgs,
         },
     ],
 ];

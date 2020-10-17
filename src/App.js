@@ -7,7 +7,7 @@ import About from './components/About';
 
 import OurTeam from './components/OurTeam';
 import Contact from './components/Contact';
-import MapTest from './components/MapTest';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,9 +30,6 @@ export default function App() {
       <CssBaseline />
       <Header />
       <About />
-      {/* THIS DIDN'T WORK
-      <MapTest /> 
-      */}
       <OurTeam />
       <Contact />
     </div>
