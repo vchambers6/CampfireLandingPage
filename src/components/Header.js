@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Collapse, IconButton, Toolbar, Button} from '@material-ui/core';
+import { AppBar, Collapse, IconButton, Toolbar, Button, Grid} from '@material-ui/core';
 import SortIcon from '@material-ui/icons/Sort';
 //import { Link } from 'react-router-dom';
 import { Link as Scroll} from 'react-scroll'
@@ -59,6 +59,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
     const classes = useStyles(); 
+    const [checked,setChecked] = useState(false);  
+    useEffect(()=> {
+        setChecked(true)
+    }, [])
     const toolBarItemsDict = { 
         "about": "About", 
         "learnMore": "Learn More", 
@@ -112,13 +116,29 @@ export default function Header() {
                     </IconButton>
                 </Toolbar>  
             </AppBar>
-            <div className={classes.containerLeft}>
-                <img src={`${process.env.PUBLIC_URL + '/assets/dog.png'}`}></img>
-            </div>
-            <div className={classes.containerRight}> 
-                <h1 className={classes.title}>campfire</h1>
-                <h1 className={classes.title}>convos</h1>
-            </div>
+            <Grid
+                container
+                spacing={6}
+                justify="center"
+                alignItems="center"
+            >
+                <Grid item xs={4}>
+                    <div className={classes.containerLeft}>
+                        <img src={`${process.env.PUBLIC_URL + '/assets/dog.png'}`}></img>
+                    </div>             
+                </Grid>
+                
+                <Grid item xs={4}>
+                    {/*<Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapsedHeight={50}> */}
+                        <div className={classes.containerRight}> 
+                            <h1 className={classes.title}>campfire <br/> convos </h1>
+                        </div>
+                    {/*</Collapse> */}
+                </Grid>
+
+            </Grid>
+            
+            
             
         </div>
     )

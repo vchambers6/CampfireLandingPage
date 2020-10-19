@@ -16,10 +16,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MapTest() {
     const classes = useStyles();  
+    var columns = [
+        {'a' : 'b'}
+      ];
     return (
         <div className={classes.root}>
         <Chart
         className={classes.map}
+        columns={columns}
         width={'1000px'}
         height={'600px'}
         chartType="GeoChart"
@@ -29,9 +33,11 @@ export default function MapTest() {
             ['Milan', 1324110, 181.76],
             ['Naples', 959574, 117.27], */
 
-            ['City', 'Population', 'Area Percentage'],
-                ['New Orleans',     65700000,    50], 
-                ['Los Angeles',     65700000,    50], 
+            ['City', ''],
+            ['New Orleans',   1], 
+            ['Los Angeles',    1], 
+            ['Phoenix', 1], 
+            ['Cambridge', 1],
                 /*['US-AL', 0],
                 ['US-AK', 0],
                 ['US-AR', 0],
@@ -65,7 +71,8 @@ export default function MapTest() {
             region: 'US',
             displayMode: 'markers',
             resolution: 'provinces',
-            colorAxis: { colors: ['green', 'blue'] },
+            colorAxis: { colors: ['#739FA8', '#739FA8', '#739FA8', '#739FA8', '#739FA8'] },
+            sizeAxis: { minValue: 0, maxValue: 100 },
             datalessRegionColor: 'transparent',
             defaultColor: '#f5f5f5',
             chartArea: {
@@ -80,7 +87,7 @@ export default function MapTest() {
         }}
         // Note: you will need to get a mapsApiKey for your project.
         // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
-        mapsApiKey='AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+        mapsApiKey='https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyAGBgYFlWucdHEIhilqzD_AAByiVxGXQL0'
         rootProps={{ 'data-testid': '3' }}
         />
 </div>

@@ -15,15 +15,16 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 400,
     background: 'rgba(255, 255, 255, 0.5)', 
-    margin: '20px', 
+    margin: '10px', 
     borderRadius: 30,
     justifyContent: "center",
     alignItems: "center",
   },
   media: {
-    width: '60%',
     margin: '25px',
-    height: 200,
+    justifyItems: 'center',
+    height: 220,
+    width: 220,
     borderRadius: '50%',
   },
   title: {
@@ -47,10 +48,12 @@ const useStyles = makeStyles({
   }
 });
 
-export default function ImageCard({ member, memberTags}) {
+export default function ImageCard({ member, checked}) {
   const classes = useStyles();
 
   return (
+    <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} >
+
     <Card className={classes.root}>
       <Grid
         container
@@ -85,5 +88,6 @@ export default function ImageCard({ member, memberTags}) {
         </Grid>
       </Grid>     
     </Card>
+    </Collapse>
   );
 }

@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center', 
         alignItems: 'center', 
         textAlign: 'center',
-        marginBottom: '-5rem',   
+        //marginBottom: '-5rem',   
     },
     title: {
         fontFamily: 'Alef',

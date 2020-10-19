@@ -5,7 +5,8 @@ import { CssBaseline, Grid } from '@material-ui/core';
 import useWindowPosition from '../hook/useWindowPosition';
 import Map from './Map';
 import AboutTags from './AboutTags';
-import MapTest from './MapTest';
+import MapTest1 from './MapTest1';
+import MapTest2 from './MapTest2';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -42,10 +43,10 @@ export default function() {
                     <h1 className={classes.title}>about</h1>
                 </Grid>
 
-                <Grid item xs={12}>
-                    <MapTest />
+                <Grid item xs={12} id="map">
+                     <MapTest1 /> 
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} id="aboutTags">
                     <AboutTags />
                 </Grid>
             </Grid>

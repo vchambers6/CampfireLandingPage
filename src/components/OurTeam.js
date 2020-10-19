@@ -30,8 +30,10 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
+
 export default function() {
     const classes = useStyles();  
+    const checked = useWindowPosition('aboutTags');
     return (
         
         <div className={classes.root} id="ourTeam">
@@ -43,31 +45,19 @@ export default function() {
             >
                 <Grid item xs={12}>
                 <div className={classes.titleWrapper}>
-                <h1 className={classes.title}>our team</h1>
-                who believe in the power of connection. just testing out the text:-)
+                    <h1 className={classes.title}>our team</h1>
                 </div>
                 </Grid>
 
-                <Grid item md={4} sm={6} xs={12}>
-                    <TeamMemberCard member={teamMembers[0]}/>
-                    
-                </Grid>
-
-                <Grid item md={4} sm={6} xs={12}>
-                    <TeamMemberCard member={teamMembers[1]} />
-                </Grid>
-
-                <Grid item md={4} sm={6} xs={12}>
-                    <TeamMemberCard member={teamMembers[2]} />
-                </Grid>
-
-                <Grid item md={4} sm={6} xs={12}>
-                    <TeamMemberCard member={teamMembers[3]} />
-                </Grid>
-
-                <Grid item md={4} sm={6} xs={12}>
-                    <TeamMemberCard member={teamMembers[4]} />
-                </Grid>
+                {
+                    teamMembers.map(member => {
+                        return (
+                            <Grid item md={4} sm={6} xs={12}>
+                            <TeamMemberCard member={member} checked={checked}/>
+                            </Grid>
+                        )
+                    })
+                }
             </Grid>
             
         </div>
