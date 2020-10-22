@@ -6,6 +6,7 @@ import SortIcon from '@material-ui/icons/Sort';
 import { Link as Scroll} from 'react-scroll'
 import { Link } from 'react-router-dom';
 import ThemedLink from './ThemedLink';
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         background: 'rgba(254, 108, 108, 0.5)',    
         position: 'fixed',
         //height: 50,
-        height: '10%',
+        display: 'flex',
 
     },
     appbarWrapper: {
@@ -29,11 +30,23 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: 16,
     },
     appbarLogo: {
-        flexGrow: '5',
+        flexGrow: 5,
+        margin: '0 auto', 
     },
     icon: {
         color: '#fff', 
         fontSize: '2rem',
+        margin: '0 auto', 
+            [theme.breakpoints.up('md')]: {
+              display: 'none',
+            },
+          toolbar: theme.mixins.toolbar,
+          drawerPaper: {
+            width: drawerWidth,
+            [theme.breakpoints.up('md')]: {
+              position: 'relative',
+            },
+          },
     },
     title: {
         margin: '-3rem',

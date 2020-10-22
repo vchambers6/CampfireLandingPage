@@ -39,7 +39,7 @@ export default function() {
         <div className={classes.root} id="ourTeam">
             <Grid 
                 container
-                spacing={6}
+                spacing={2}
                 justify="center"
                 alignItems="center"
             >
@@ -52,7 +52,7 @@ export default function() {
                 {
                     teamMembers.map(member => {
                         return (
-                            <Grid item md={4} sm={6} xs={12}>
+                            <Grid item md={2} sm={2} xs={2}>
                             <TeamMemberCard member={member} checked={checked}/>
                             </Grid>
                         )

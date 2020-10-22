@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         width: '20%'
     },
+    mapContainer: {
+        
+    }
 }))
 
 export default function() {
@@ -44,7 +47,10 @@ export default function() {
                 </Grid>
 
                 <Grid item xs={12} id="map">
-                     <MapTest1 /> 
+                    <div className={classes.mapContainer}>
+                        <MapTest1 />
+                    </div>
+                      
                 </Grid>
                 <Grid item xs={12} id="aboutTags">
                     <AboutTags />

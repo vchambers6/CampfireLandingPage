@@ -18,10 +18,6 @@ const TeamMemberTags = [
             color: locations,
         }, 
         {
-            title: "Second Generation Immigrant", 
-            color: idExp,
-        },
-        {
             title: "Astronomy", 
             color: academics,
         },
@@ -50,24 +46,12 @@ const TeamMemberTags = [
             color: academics, 
         },
         {
-            title: "Currier", 
-            color: locations,
-        },
-        {
             title: "Career Networking", 
-            color: idExp,
-        },
-        {
-            title: "French Open", 
             color: idExp,
         },
     ],
 
     [
-        {
-            title: "First Generation Immigrant",
-            color: idExp,
-        }, 
         {
             title: "Skiing", 
             color: idExp,
@@ -88,13 +72,13 @@ const TeamMemberTags = [
 
     [
         {
-            title: "Women in Computer Science",
+            title: "Student Athlete",
             color: orgs,
         }, 
-        {
+        /*{
             title: "Vegan", 
             color: idExp,
-        },
+        },*/
         {
             title: "Harvard Class of 2024", 
             color: academics, 
@@ -107,23 +91,11 @@ const TeamMemberTags = [
             title: "Social Justice", 
             color: idExp,
         },
-        {
-            title: "STAT 110", 
-            color: academics,
-        },
     ],
 
     [
         {
-            title: "Language Learning",
-            color: idExp,
-        }, 
-        {
-            title: "Harvard Class of 2023", 
-            color: academics, 
-        },
-        {
-            title: "CDT/CST", 
+            title: "New Orleans", 
             color: locations,
         },
         {

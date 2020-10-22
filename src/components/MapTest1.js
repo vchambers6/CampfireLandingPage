@@ -8,6 +8,10 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex', 
         justifyContent: 'center', 
         alignItems: 'center', 
+        backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/mapBackground.png"})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '840px',
+        backgroundPosition: 'center',
     },
     map: {
     },
@@ -24,8 +28,8 @@ export default function MapTest() {
         <Chart
         className={classes.map}
         columns={columns}
-        width={'1000px'}
-        height={'600px'}
+        width={'800px'}
+        height={'480px'}
         chartType="GeoChart"
         data={[
             /*['City', 'Population', 'Area'],
@@ -71,18 +75,20 @@ export default function MapTest() {
             region: 'US',
             displayMode: 'markers',
             resolution: 'provinces',
-            colorAxis: { colors: ['#739FA8', '#739FA8', '#739FA8', '#739FA8', '#739FA8'] },
+            colorAxis: { colors: ['black'] },
             sizeAxis: { minValue: 0, maxValue: 100 },
             datalessRegionColor: 'transparent',
             defaultColor: '#f5f5f5',
             chartArea: {
                 backgroundColor: {
-                fill: 'transparent',
-                fillOpacity: 0.0
+                    fill: 'transparent',
+                    fillOpacity: 0.0,
+                    stroke: '#000000',
                 },
             },
             backgroundColor: {
                 fill: 'transparent',
+                stroke: '#000000',
             },
         }}
         // Note: you will need to get a mapsApiKey for your project.

@@ -18,14 +18,17 @@ const useStyles = makeStyles((theme) => ({
   },
   chip: {
     backgroundColor: '#ffffff',
+    display: 'flex',
     
   },
   icon: {
     borderRadius: '50%', 
+    height: '20px',
+    width: '20px',
   }, 
 }));
 
-export default function Chips({tags}) {
+export default function Chips({tags, size}) {
   const classes = useStyles();
 
   const handleDelete = () => {
@@ -43,6 +46,7 @@ export default function Chips({tags}) {
       {tags.map(tag => {
           return (
             <Chip 
+                size={size}
                 id="chip"
                 className={classes.chip}
                 icon={<Icon className={classes.icon} style={{backgroundColor: tag.color}}/>}
@@ -52,54 +56,6 @@ export default function Chips({tags}) {
            )
             
       })}
-      </div>
-      /*<Chip label="Basic" />
-      <Chip label="Disabled" disabled />
-      
-      
-      <Chip avatar={<Avatar>M</Avatar>} label="Clickable" onClick={handleClick} />
-     
-      <Chip
-        avatar={<Avatar alt="Natacha" src="/static/images/avatar/1.jpg" />}
-        label="Deletable"
-        onDelete={handleDelete}
-      />
-      <Chip
-        icon={<FaceIcon />}
-        label="Clickable deletable"
-        onClick={handleClick}
-        onDelete={handleDelete}
-      />
-      <Chip
-        label="Custom delete icon"
-        onClick={handleClick}
-        onDelete={handleDelete}
-        deleteIcon={<DoneIcon />}
-      />
-      <Chip label="Clickable Link" component="a" href="#chip" clickable />
-      <Chip
-        avatar={<Avatar>M</Avatar>}
-        label="Primary clickable"
-        clickable
-        color="primary"
-        onDelete={handleDelete}
-        deleteIcon={<DoneIcon />}
-      />
-      <Chip
-        icon={<FaceIcon />}
-        label="Primary clickable"
-        clickable
-        color="primary"
-        onDelete={handleDelete}
-        deleteIcon={<DoneIcon />}
-      />
-      <Chip label="Deletable primary" onDelete={handleDelete} color="primary" />
-      <Chip
-        icon={<FaceIcon />}
-        label="Deletable secondary"
-        onDelete={handleDelete}
-        color="secondary"
-      /> */
-    
+      </div>  
   );
 }

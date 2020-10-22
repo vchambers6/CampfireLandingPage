@@ -13,31 +13,37 @@ import TagArray from './TagArray';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 400,
-    background: 'rgba(255, 255, 255, 0.5)', 
-    margin: '10px', 
-    borderRadius: 30,
+    maxWidth: 350,
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)', 
+    //margin: '10px', 
+    borderRadius: 15,
+    boxShadow: '0 4px 7px 3px rgba(255, 142, 164, 0.3)',
     justifyContent: "center",
     alignItems: "center",
   },
   media: {
     margin: '25px',
     justifyItems: 'center',
-    height: 220,
-    width: 220,
-    borderRadius: '50%',
+    height: 100,
+    width: 100,
+    objectFit: 'cover',
+    borderRadius: 1,
+    position: 'relative',
+    display: 'flex',
+      marginLeft: 'auto',
+      marginRight: 'auto',
   },
   title: {
     fontFamily: 'Alef', 
     fontWeight: 'bold', 
     fontSize: '2rem', 
     textAlign: "center",
-    color: "#000", 
+    color: "#fff", 
   }, 
   desc: {
     fontFamily: 'Alef',
     fontSize: '1.1rem', 
-    color: "#000",
+    color: "#ff",
     textAlign: "center",
   },
   content: {
@@ -77,14 +83,19 @@ export default function ImageCard({ member, checked}) {
             >
               {member.name}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p" className={classes.desc}>
+            <Typography variant="h6" color="textSecondary" component="h1" className={classes.desc}>
               {member.description}
             </Typography>
+
+            <Typography variant="body1" color="textSecondary" component="p" className={classes.desc}>
+              {member.bio}
+            </Typography>
+
           </CardContent>
         </Grid>
 
         <Grid item xs={12} className={classes.tagArray}>
-            <TagArray tags={member.tags} />
+            <TagArray tags={member.tags} size="small"/>
         </Grid>
       </Grid>     
     </Card>
