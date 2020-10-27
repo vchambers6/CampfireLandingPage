@@ -7,7 +7,9 @@ const teamMembers = [
         imageUrl: process.env.PUBLIC_URL + 'assets/Anri.png',
         tags: teamMemberTags[0], 
         bio: ` 
-                this is my bio 
+                I'm fascinated by space and the stars, 
+                but I also love anything related to Canada! 
+                Connect with me through the tags below!
             `,
         
     }, 
@@ -18,7 +20,8 @@ const teamMembers = [
         imageUrl: process.env.PUBLIC_URL + 'assets/Jenny.png',
         tags: teamMemberTags[1], 
         bio: ` 
-                this is my bio 
+                I love neuroscience but also kind of everything else (help). 
+                Find me at the tags below! 
             `,
     }, 
 
@@ -28,8 +31,9 @@ const teamMembers = [
         imageUrl: process.env.PUBLIC_URL + 'assets/Min.png',
         tags: teamMemberTags[2], 
         bio: ` 
-                this is my bio 
-            `,
+                Working in tech, not enjoying the Seattle gloom currently. 
+                Pop my bubble and chat with me via tags ` +String.fromCodePoint(0x1F642) +  
+                `Connect with y’all soon!`,
     }, 
 
     {

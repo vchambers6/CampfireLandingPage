@@ -7,13 +7,14 @@ import Map from './Map';
 import AboutTags from './AboutTags';
 import MapTest1 from './MapTest1';
 import MapTest2 from './MapTest2';
+import MapTest3 from './MapTest3';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         minHeight: '100vh', 
         display: 'flex', 
-        // justifyContent: 'center', 
-        // alignItems: 'center', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
         [theme.breakpoints.down("md")]: {
             flexDirection: 'column', 
         },
@@ -23,10 +24,28 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '6rem',
         margin: '3rem',
         color: 'white',
-        width: '20%'
+        width: '20%', 
+        textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
     },
     mapContainer: {
-        
+        background: 'rgba(255, 255, 255, 0.5)',
+        borderRadius: 20,
+        width: '80%',
+        justifyContent: 'center',
+        alignSelf: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        textAlign: 'center',
+    },
+    mapText: {
+        color: 'black',
+        fontSize: '3.2rem', 
+        marginTop: '30px',
+        marginBottom: '40px',
+        textShadow: '2px 2px rgba(252, 96, 96, 0.5)',
+    }, 
+    map: {
+        marginBottom: '40px',
     }
 }))
 
@@ -46,9 +65,17 @@ export default function() {
                     <h1 className={classes.title}>about</h1>
                 </Grid>
 
-                <Grid item xs={12} id="map">
+                <Grid item xs={12} id="map">   
                     <div className={classes.mapContainer}>
-                        <MapTest1 />
+                        <Grid container>
+                            <Grid item xs={12} className={classes.mapText}>
+                                <span > <b> currently 3 fires lit! </b> </span>
+                            </Grid>
+                            <Grid item xs={12} className={classes.map}>
+                                <MapTest3 />
+                            </Grid>
+                        </Grid>
+                        
                     </div>
                       
                 </Grid>

@@ -7,8 +7,8 @@ identity/experience - #f9c642
 
 const academics = '#4aa564';
 const orgs = '#00a6d2';
-const locations = '#ff6b84'; 
-const idExp = '#f9c642';
+const locations = '#f9c642';
+const idExp = '#ff6b84';
 
 const landingPageTags = [
     // Anri

@@ -14,7 +14,7 @@ import TagArray from './TagArray';
 const useStyles = makeStyles({
   root: {
     maxWidth: 350,
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)', 
+    background: 'linear-gradient(45deg, #ff8299 30%, #FF8E53 90%)', 
     //margin: '10px', 
     borderRadius: 15,
     boxShadow: '0 4px 7px 3px rgba(255, 142, 164, 0.3)',
@@ -42,12 +42,18 @@ const useStyles = makeStyles({
   }, 
   desc: {
     fontFamily: 'Alef',
+    fontWeight: '900',
     fontSize: '1.1rem', 
-    color: "#ff",
+    color: "#fff",
     textAlign: "center",
   },
   content: {
     
+  },
+  bio: {
+    fontSize: '0.9rem',
+    textAlign: "center",
+    color: "#fff",
   },
   tagArray: {
     marginBottom: '30px', 
@@ -87,7 +93,7 @@ export default function ImageCard({ member, checked}) {
               {member.description}
             </Typography>
 
-            <Typography variant="body1" color="textSecondary" component="p" className={classes.desc}>
+            <Typography variant="body1" color="textSecondary" component="p" className={classes.bio}>
               {member.bio}
             </Typography>
 

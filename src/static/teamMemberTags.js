@@ -7,26 +7,26 @@ identity/experience - #f9c642
 
 const academics = '#4aa564';
 const orgs = '#00a6d2';
-const locations = '#ff6b84';
-const idExp = '#f9c642';
+const locations = '#f9c642';
+const idExp = '#ff6b84';
 
 const TeamMemberTags = [
     [
         // Anri
         {
-            title: "EST/EDT",
-            color: locations,
-        }, 
-        {
-            title: "Astronomy", 
-            color: academics,
-        },
-        {
             title: "Toronto Blue Jays", 
             color: idExp,
         },
         {
-            title: "Mandarin", 
+            title: "Astronomy", 
+            color: idExp,
+        },
+        {
+            title: "Ketchup Chips",
+            color: idExp,
+        }, 
+        {
+            title: "Bagged Milk", 
             color: idExp,
         },
     ],
@@ -34,38 +34,38 @@ const TeamMemberTags = [
     [
         // Jenny 
         {
-            title: "Neuroscience",
-            color: academics,
+            title: "Broadway Jazz",
+            color: idExp,
         }, 
         {
-            title: "Chinese Dance", 
+            title: "Science Fiction", 
             color: idExp,
         },
         {
-            title: "Harvard Class of 2022", 
-            color: academics, 
+            title: "Sketching", 
+            color: idExp, 
         },
         {
-            title: "Career Networking", 
+            title: "Racquet Sports", 
             color: idExp,
         },
     ],
 
     [
         {
-            title: "Skiing", 
+            title: "Korean", 
             color: idExp,
         },
         {
-            title: "Seattle", 
-            color: locations,
+            title: "Musicals", 
+            color: idExp,
         },
         {
             title: "Women in Tech", 
             color: idExp,
         },
         {
-            title: "Korean", 
+            title: "Sports", 
             color: idExp,
         },  
     ],
@@ -95,8 +95,8 @@ const TeamMemberTags = [
 
     [
         {
-            title: "New Orleans", 
-            color: locations,
+            title: "Longboarding", 
+            color: idExp,
         },
         {
             title: "BIPOC", 
@@ -104,11 +104,11 @@ const TeamMemberTags = [
         },
         {
             title: "Animation", 
-            color: academics,
+            color: idExp,
         },
         {
             title: "MIT Gymnastics", 
-            color: orgs,
+            color: idExp,
         },
     ],
 ];

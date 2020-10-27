@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '2rem',
         color: 'white',
         marginBottom: '-1rem',
+        textShadow: '2px 2px rgba(252, 96, 96, 0.5)',
         
     },
 }))

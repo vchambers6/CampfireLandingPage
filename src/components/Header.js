@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Collapse, IconButton, Toolbar, Button, Grid} from '@material-ui/core';
+import { AppBar, Collapse, IconButton, Toolbar, Button, Grid, Divider, Box} from '@material-ui/core';
+import { borders } from '@material-ui/system';
 import SortIcon from '@material-ui/icons/Sort';
 //import { Link } from 'react-router-dom';
 import { Link as Scroll} from 'react-scroll'
 import { Link } from 'react-router-dom';
 import ThemedLink from './ThemedLink';
+import Drawer from './Drawer';
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -18,32 +20,29 @@ const useStyles = makeStyles((theme) => ({
         width: '100vw',
     },
     appbar: {
-        background: 'rgba(254, 108, 108, 0.5)',    
+        background: 'rgba(252, 96, 96, 0.7)',    
         position: 'fixed',
         //height: 50,
         display: 'flex',
-
-    },
+        borderBottom: '5em soild white',
+        
     appbarWrapper: {
         width: '90%',
         margin: '0 auto',    
-        borderRadius: 16,
+    },
     },
     appbarLogo: {
         flexGrow: 5,
         margin: '0 auto', 
     },
     icon: {
-        color: '#fff', 
-        fontSize: '2rem',
-        margin: '0 auto', 
-            [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('md')]: {
               display: 'none',
-            },
-          toolbar: theme.mixins.toolbar,
+        },
+        toolbar: theme.mixins.toolbar,
           drawerPaper: {
             width: drawerWidth,
-            [theme.breakpoints.up('md')]: {
+            [theme.breakpoints.up('sm')]: {
               position: 'relative',
             },
           },
@@ -58,7 +57,10 @@ const useStyles = makeStyles((theme) => ({
     },
     toolBarButtons: {
         color: '#ffffff',
-        fontSize: '1rem',
+        fontSize: '1.3rem',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        }
     },
     containerRight: {
         textAlign: 'right',
@@ -76,14 +78,12 @@ export default function Header() {
     useEffect(()=> {
         setChecked(true)
     }, [])
-    const toolBarItemsDict = { 
-        "about": "About", 
-        "learnMore": "Learn More", 
-        "ourTeam": "Our Team", 
-    };
-    var toolBarItems = [["about", "About"], ["learnMore", "Learn More"], ["ourTeam", "Our Team"], ]
+
+    var toolBarItems = [["about", "about"], ["learnMore", "learn more"], ["ourTeam", "our team"], ]
     return(
         <div className={classes.root} id='header'>
+
+            
             <AppBar className = {classes.appbar} elevation={0}>
                 <Toolbar className={classes.appbarWrapper}>
                     <Scroll to="header" smooth={true} className={classes.appbarLogo}>
@@ -93,18 +93,8 @@ export default function Header() {
                             </Button>
                         </h1>
                     </Scroll>
-                    {/* generate these with js? */}
                     <div className={classes.toolBarButtons}>
-                        {/*for (button in toolBarItems) {
-                                return (
-                                    <Scroll to={button} smooth={true}>
-                                    <Button className={classes.toolBarButtons}>
-                                        {toolBarItems[button]}
-                                        </Button >
-                                    </Scroll>
-                                    )
-                                }
-                            */}
+                        
                             {toolBarItems.map(toolBarItem => {
                             return ( 
                                 <Scroll to={toolBarItem[0]} smooth={true}>
@@ -121,14 +111,15 @@ export default function Header() {
                                     window.location.href="https://campfireconvos.com/registration";
                                 }}
                             >
-                                Register
+                                register
                             </Button>         
                     </div>
-                    <IconButton>
-                        <SortIcon className={classes.icon}/>
-                    </IconButton>
+                    <div className={classes.icon}>
+                        <Drawer />
+                    </div>  
                 </Toolbar>  
             </AppBar>
+
             <Grid
                 container
                 spacing={6}
