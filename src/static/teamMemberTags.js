@@ -73,7 +73,7 @@ const TeamMemberTags = [
     [
         {
             title: "Student Athlete",
-            color: orgs,
+            color: idExp,
         }, 
         /*{
             title: "Vegan", 
@@ -81,11 +81,11 @@ const TeamMemberTags = [
         },*/
         {
             title: "Harvard Class of 2024", 
-            color: academics, 
+            color: idExp, 
         },
         {
             title: "California", 
-            color: locations,
+            color: idExp,
         },
         {
             title: "Social Justice", 

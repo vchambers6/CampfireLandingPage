@@ -50,7 +50,7 @@ const MapChart = () => {
         <div className={classes.map}>
             <ComposableMap projection="geoAlbersUsa"
                 width='1000'
-                style={{strokeWidth: 3,}}
+                style={{strokeWidth: 2,}}
             > 
             <Geographies geography={geoUrl}>
                 {({ geographies }) => (
@@ -79,7 +79,7 @@ const MapChart = () => {
             {/* coordinate system is [lon, lat] (order of d3-geo */}
             {schools.map(school => (
                 <Marker coordinates={[school["lon"], school["lat"]]}>
-                    <circle r={6} fill="#fc6060" />
+                    <circle r={8} fill="#fc6060" />
                 </Marker>
             ))}
             

@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         fontFamily: 'Alef',
-        fontSize: '4.5rem',
+        fontSize: '3rem',
         margin: '2rem',
         color: 'white',
         marginBottom: '-1rem',

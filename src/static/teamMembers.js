@@ -52,7 +52,11 @@ const teamMembers = [
         imageUrl: process.env.PUBLIC_URL + 'assets/Vanessa.png',
         tags: teamMemberTags[4], 
         bio: ` 
-                this is my bio 
+                Born and raised in New Orleans, 
+                Louisiana! When I'm not studying CS,
+                I'm either reading, longboarding, or cooking!
+
+
             `,
     }, 
 

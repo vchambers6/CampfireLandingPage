@@ -3,10 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { MovieFilter } from '@material-ui/icons';
 import { CssBaseline, Grid } from '@material-ui/core';
 import useWindowPosition from '../hook/useWindowPosition';
-import Map from './Map';
 import AboutTags from './AboutTags';
-import MapTest1 from './MapTest1';
-import MapTest2 from './MapTest2';
 import MapTest3 from './MapTest3';
 
 const useStyles = makeStyles((theme) => ({
@@ -21,11 +18,15 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         fontFamily: 'Alef',
-        fontSize: '6rem',
+        fontSize: '4rem',
         margin: '3rem',
+        textAlign: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
         color: 'white',
         width: '20%', 
-        textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
+        //textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
+        textShadow: '2px 2px rgba(252, 96, 96, 0.5)',
     },
     mapContainer: {
         background: 'rgba(255, 255, 255, 0.5)',
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
     mapText: {
         color: 'black',
-        fontSize: '3.2rem', 
+        fontSize: '3rem', 
         marginTop: '30px',
         marginBottom: '40px',
         textShadow: '2px 2px rgba(252, 96, 96, 0.5)',
