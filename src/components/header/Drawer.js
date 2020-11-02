@@ -68,7 +68,7 @@ export default function Drawer() {
                 </Scroll>
             </ListItem>
         ))}
-        <Divider style={{color: 'white'}} flexItem/>
+        <Divider orientation='horizontal'/>
         <ListItem>
             <Button 
                 className={classes.toolBarButtons} 
@@ -80,6 +80,19 @@ export default function Drawer() {
             >
                 register
             </Button>  
+        </ListItem>
+
+        <ListItem>
+          <Button 
+              className={classes.toolBarButtons} 
+              style={{textTransform: 'none'}}
+              onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href="https://campfireconvos.com/login";
+              }}
+          >
+              log in
+          </Button> 
         </ListItem>
       </List>
     </div>

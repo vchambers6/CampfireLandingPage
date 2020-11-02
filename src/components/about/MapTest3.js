@@ -7,11 +7,22 @@ import {
   Marker,
   Annotation
 } from "react-simple-maps";
-import { makeStyles } from '@material-ui/core/styles'; 
+import { makeStyles, withStyles } from '@material-ui/core/styles'; 
 import {Container } from '@material-ui/core'
 
 import allStates from "./allstates.json";
-import schools from "../static/schoolsOnboard.json";
+import schools from "../../static/schoolsOnboard.json";
+
+const InteractiveMarker = withStyles((theme) => ({
+    style: {
+
+    },
+    '&:hover': {
+        backgroundColor: '#000',
+        color: '#fff', 
+      },
+
+}))(Marker); 
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
@@ -34,10 +45,17 @@ const useStyles = makeStyles((theme) => ({
         //justifyContent: 'center', 
         //alignItems: 'center', 
         backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/mapBackground.png"})`,
+        backgroundColor: 'rgba(255,255,255,0.6)', 
+        backgroundBlendMode: 'lighten', // changes opacity of background image. 
         backgroundRepeat: 'no-repeat',
         //backgroundSize: '840px',
         backgroundPosition: 'center',
-        backgroundSize: 'cover',
+        backgroundSize: '90%',
+    },
+    marker: {
+        '&:hover': {
+            fill: '#000'
+          },
     },
 }))
 
@@ -64,6 +82,7 @@ const MapChart = () => {
                         
                     />
                     ))}
+                    {/* 
                     {geographies.map(geo => {
                     const centroid = geoCentroid(geo);
                     const cur = allStates.find(s => s.val === geo.id);
@@ -72,6 +91,7 @@ const MapChart = () => {
                         </g>
                     );
                     })}
+                    */}
                 </>
                 )}
             </Geographies>
@@ -79,7 +99,7 @@ const MapChart = () => {
             {/* coordinate system is [lon, lat] (order of d3-geo */}
             {schools.map(school => (
                 <Marker coordinates={[school["lon"], school["lat"]]}>
-                    <circle r={8} fill="#fc6060" />
+                    <circle className={classes.marker} r={8} fill="#fc6060" />
                 </Marker>
             ))}
             

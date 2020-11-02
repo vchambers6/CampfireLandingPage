@@ -61,7 +61,8 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '4rem',
     },
     mainContent: {
-        marginTop: '5%',
+        marginTop: '10%',
+        height: '100vh',
     }
 })) 
 
@@ -105,7 +106,17 @@ export default function Header() {
                                 }}
                             >
                                 register
-                            </Button>         
+                            </Button>    
+                            <Button 
+                                className={classes.toolBarButtons} 
+                                style={{textTransform: 'none'}}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    window.location.href="https://campfireconvos.com/login";
+                                }}
+                            >
+                                log in
+                            </Button>       
                     </Grid>
                     <div className={classes.icon}>
                         <Drawer />

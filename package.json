@@ -17,7 +17,8 @@
     "react-scripts": "3.4.3",
     "react-scroll": "^1.8.1",
     "react-shadow-text": "^1.1.0",
-    "react-simple-maps": "^2.1.2"
+    "react-simple-maps": "^2.1.2",
+    "react-transition-group": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

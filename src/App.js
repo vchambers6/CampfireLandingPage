@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 //import './App.css';
 import { CssBaseline } from '@material-ui/core';
 import Header from './components/header/Header';
-import About from './components/About';
+import About from './components/about/About';
 
 import OurTeam from './components/OurTeam';
 import Contact from './components/Contact';

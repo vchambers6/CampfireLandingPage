@@ -20,6 +20,8 @@ const ColorButton = withStyles((theme) => ({
         backgroundColor: '#ff5c5c',
         color: '#fff', 
       },
+      display: 'flex',
+      marginTop: '10px',
     },
   }))(Button);
 
@@ -71,28 +73,24 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '3vw',
     },
     boxes: {
-        marginTop: '-30px',
-        
+        marginTop: '-30px',  
     },
     joinNowBox: {
         background: 'rgba(255, 153, 153, 0.5)',
         borderRadius: '6px',
+        padding: '10px',
         
     },
-    joinNowText: {
-        marginTop: '5%', 
-        marginBottom: '5%',
-        fontSize: '2vw',
-    },
+    
     learnMoreBox: {
         background: 'rgba(196, 196, 196, 0.5)',
         borderRadius: '6px',
+        padding: '10px',
+        
     },
-    learnMoreText: {
-        marginTop: '5%', 
-        marginBottom: '1%',
+    boxesText: {
         fontSize: '2vw',
-    }
+    },
 
 
 })) 
@@ -131,39 +129,49 @@ export default function HeaderMainContent() {
                                 
                                 <p className={classes.subtitle}> an online platform reimagining <br/> <b style={{color: '#ff9999'}}> campus communities. </b></p> 
                             </Grid>
-                            
-                            <Grid item xs={6} className={classes.boxes}>
-                                <Box display='flex' className={classes.joinNowBox}> 
-                                    <Grid container direction='column' justify='center' alignItems="center" className={classes.joinNowText}>
-                                        <Grid item xs={12} style={{textAlign: 'center'}}>
-                                            <Box> <Typography> live at {campusCount} schools and counting. <br/> join today! </Typography>  </Box>
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <ColorButton
-                                                onClick={(e) => {
-                                                e.preventDefault();
-                                                window.location.href="https://campfireconvos.com/registration";}}
-                                            > 
-                                                <b> register now  </b>
-                                            </ColorButton> 
-                                        </Grid>
-                                    </Grid>
-                                    
-                                </Box>
-                            </Grid>
-                            
-                            <Grid item xs={4} className={classes.boxes}>
-                                <Box display='flex' className={classes.learnMoreBox}> 
-                                    <Grid container direction='column' justify='center' alignItems="center" className={classes.learnMoreText}>
-                                        <Grid item xs={12} style={{textAlign: 'center'}}>
-                                            <Box> <Typography> find out more about campfire! </Typography>  </Box>
-                                        </Grid>
-                                        <Grid item xs={12}> <Scroll to="about" smooth={true}> <CustomExpandMore /> </Scroll> </Grid>
-                                    </Grid>
-                                    
-                                </Box>
 
-                            </Grid>
+                            {/* BUTTONS BELOW MAIN TEXT */}
+                            <Grid item xs={12}>
+                                <Grid container direction='row' alignItems='stretch' spacing={2}>
+
+                                    {/* REGISTER NOW BUTTON */}
+                                    <Grid item xs={6} className={classes.boxes}>
+                                        <Box height='100%'  className={classes.joinNowBox}> 
+                                            <Grid container direction='column' justify='center' alignItems="center" >
+                                                <Grid item xs={12} style={{textAlign: 'center'}}>
+                                                    <Box> <Typography className={classes.boxesText}> live at {campusCount} schools and counting. <br/> join today! </Typography>  </Box>
+                                                </Grid>
+                                                <Grid item xs={12}>
+                                                    <ColorButton
+                                                        onClick={(e) => {
+                                                        e.preventDefault();
+                                                        window.location.href="https://campfireconvos.com/registration";}}
+                                                        className={classes.boxesText}
+                                                    > 
+                                                        <b> register now  </b>
+                                                    </ColorButton> 
+                                                </Grid>
+                                            </Grid>   
+                                        </Box>
+                                    </Grid>
+
+                                    {/* LEARN MORE ABOUT CC BUTTON */}
+                                    <Grid item xs={4} className={classes.boxes}>
+                                        <Box height='100%' className={classes.learnMoreBox}> 
+                                            <Grid container direction='column' justify='center' alignItems="center" className={classes.learnMoreText}>
+                                                <Grid item xs={12} style={{textAlign: 'center'}}>
+                                                    <Box> <Typography className={classes.boxesText}> find out more about campfire! </Typography>  </Box>
+                                                </Grid>
+                                                <Grid item xs={12}> <Scroll to="about" smooth={true}> <CustomExpandMore /> </Scroll> </Grid>
+                                            </Grid>   
+                                        </Box>
+                                    </Grid>
+
+                                </Grid>
+                            </Grid> {/* END OF BUTTONS BELOW MAIN TEXT */}
+                            
+                            
+                            
                             
                             
                         </Grid>

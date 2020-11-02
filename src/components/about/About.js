@@ -1,9 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'; 
 import { MovieFilter } from '@material-ui/icons';
-import { CssBaseline, Grid } from '@material-ui/core';
-import useWindowPosition from '../hook/useWindowPosition';
-import AboutTags from './AboutTags';
+import { CssBaseline, Grid, Box, Typography } from '@material-ui/core';
+import AboutTags from '../AboutTags';
 import MapTest3 from './MapTest3';
 
 const useStyles = makeStyles((theme) => ({
@@ -40,14 +39,13 @@ const useStyles = makeStyles((theme) => ({
     },
     mapText: {
         color: 'black',
-        fontSize: '3rem', 
-        marginTop: '30px',
-        marginBottom: '40px',
-        textShadow: '2px 2px rgba(252, 96, 96, 0.5)',
+        fontSize: '1vw', 
+        marginBottom: '10%',
+        textShadow: '0.1vw 0.1vw rgba(252, 96, 96, 0.5)',
     }, 
     map: {
         marginBottom: '40px',
-    }
+    },
 }))
 
 export default function() {
@@ -66,11 +64,17 @@ export default function() {
                     <h1 className={classes.title}>about</h1>
                 </Grid>
 
-                <Grid item xs={12} id="map">   
+                <Grid item xs={6}>
+                    <Box>
+                        <Typography style={{textAlign: 'center'}}> What is campfire?</Typography>
+                    </Box>
+                </Grid>
+
+                <Grid item xs={6} id="map">   
                     <div className={classes.mapContainer}>
                         <Grid container>
-                            <Grid item xs={12} className={classes.mapText}>
-                                <span > <b> currently 3 fires lit! </b> </span>
+                            <Grid item xs={12} >
+                                <span className={classes.mapText}> <b> currently 3 fires lit! </b> </span>
                             </Grid>
                             <Grid item xs={12} className={classes.map}>
                                 <MapTest3 />
