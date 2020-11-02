@@ -34,14 +34,14 @@ const useStyles = makeStyles({
       marginRight: 'auto',
   },
   title: {
-    fontFamily: 'Alef', 
+    fontFamily: 'Poppins', 
     fontWeight: 'bold', 
     fontSize: '2rem', 
     textAlign: "center",
     color: "#fff", 
   }, 
   desc: {
-    fontFamily: 'Alef',
+    fontFamily: 'Poppins',
     fontWeight: '900',
     fontSize: '1.1rem', 
     color: "#fff",

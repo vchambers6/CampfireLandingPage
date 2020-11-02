@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     title: {
-        fontFamily: 'Alef',
+        fontFamily: 'Poppins',
         fontSize: '6rem',
         margine: '-1rem',
         color: 'white',

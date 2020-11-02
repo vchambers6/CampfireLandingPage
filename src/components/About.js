@@ -4,10 +4,11 @@ import { MovieFilter } from '@material-ui/icons';
 import { CssBaseline, Grid } from '@material-ui/core';
 import useWindowPosition from '../hook/useWindowPosition';
 import AboutTags from './AboutTags';
-import MapTest3 from './MapTest3';
+import Map from './Map'
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        fontFamily: 'Poppins',
         minHeight: '100vh', 
         display: 'flex', 
         justifyContent: 'center', 
@@ -17,36 +18,27 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     title: {
-        fontFamily: 'Alef',
-        fontSize: '4rem',
-        margin: '3rem',
-        textAlign: 'center',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        color: 'white',
-        width: '20%', 
-        //textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
-        textShadow: '2px 2px rgba(252, 96, 96, 0.5)',
-    },
-    mapContainer: {
-        background: 'rgba(255, 255, 255, 0.5)',
-        borderRadius: 20,
-        width: '80%',
-        justifyContent: 'center',
-        alignSelf: 'center',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        textAlign: 'center',
-    },
+        fontFamily: 'Poppins',
+        fontSize: '5vw',
+        color: 'rgb(255, 143, 143,1)',
+      //  textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
+        textAlign: 'left',
+        lineHeight: '99%', 
+        paddingLeft: '35px',
+        lineHeight: .9,
+        },
+
     mapText: {
         color: 'black',
-        fontSize: '3rem', 
-        marginTop: '30px',
-        marginBottom: '40px',
-        textShadow: '2px 2px rgba(252, 96, 96, 0.5)',
+        fontSize: '2rem', 
+        paddingLeft: '20px',
+        paddingTop: '30px',
+        paddingBottom: '30px',
     }, 
-    map: {
-        marginBottom: '40px',
+
+    mapContainer: {
+        padding: '3px',
+        margin: '5px',
     }
 }))
 
@@ -57,33 +49,31 @@ export default function() {
             
 
             <Grid
-            container
-            spacing={6}
-            justifyContent="center"
-            alignItems="center"
+                container
+                spacing={1}
+                justifyContent='center'
+                alignItems='center'
             >
-                <Grid item xs={12}>
-                    <h1 className={classes.title}>about</h1>
-                </Grid>
+                <h1 className={classes.title}>about</h1>
 
-                <Grid item xs={12} id="map">   
-                    <div className={classes.mapContainer}>
-                        <Grid container>
-                            <Grid item xs={12} className={classes.mapText}>
-                                <span > <b> currently 3 fires lit! </b> </span>
-                            </Grid>
-                            <Grid item xs={12} className={classes.map}>
-                                <MapTest3 />
-                            </Grid>
-                        </Grid>
-                        
-                    </div>
-                      
-                </Grid>
                 <Grid item xs={12} id="aboutTags">
                     <AboutTags />
                 </Grid>
+
+                <div className={classes.mapContainer}>
+                    <Grid container>
+                        <Grid item xs={6} className={classes.mapText}>
+                            <span > <b> Enriching campus communities. </b> </span>
+                            <img style={{width: '50%'}}src={`${process.env.PUBLIC_URL + '/assets/world.png'}`}  className={classes.connect}></img>
+
+                        </Grid>
+                        <img src={`${process.env.PUBLIC_URL + '/assets/map.png'}`}  className={classes.connect}></img>
+
+                    </Grid>
+                </div>
+
             </Grid>
+            
         </div>
         
     )

@@ -13,14 +13,25 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("md")]: {
             flexDirection: 'column', 
         },
+        padding: '20px',
     },
     titleWrapper: {
         margin: '3rem',
     },
     title: {
-        fontFamily: 'Alef',
-        fontSize: '6rem',
-        color: 'white',
+        fontFamily: 'Poppins',
+        fontSize: '5vw',
+        color: 'rgb(255, 143, 143,1)',
+      //  textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
+        textAlign: 'left',
+        lineHeight: '99%', 
+        paddingLeft: '35px',
+        lineHeight: .9,
+    },
+    formContainer: {
+        width: '100%',
+        height: '300px',
+        backgroundColor: 'pink',
     },
 }))
 
@@ -31,6 +42,11 @@ export default function() {
             <div className={classes.titleWrapper}>
                 <h1 className={classes.title}>contact</h1>
             </div>
+            <div className={classes.formContainer}>
+                <p> placeholder for contact form</p>
+            </div>
+           
         </div>
+       
     )
 }

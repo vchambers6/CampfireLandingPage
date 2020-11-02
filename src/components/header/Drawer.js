@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import SortIcon from '@material-ui/icons/Sort';
 import { Link as Scroll} from 'react-scroll'
@@ -12,7 +11,8 @@ import { Link as Scroll} from 'react-scroll'
 const useStyles = makeStyles({
   list: {
     width: 250,
-    background: '#ff9999'   
+    background: '#ff9999',
+    
   },
   fullList: {
     width: 'auto',
@@ -62,13 +62,13 @@ export default function Drawer() {
         {toolBarItems.map(toolBarItem => (
             <ListItem>
                 <Scroll to={toolBarItem[0]} smooth={true}>
-                    <Button className={classes.toolBarButtons} style={{textTransform: 'none'}}>
+                    <Button className={classes.toolBarButtons} style={{ftextTransform: 'none'}}>
                         {toolBarItem[1]}
                     </Button>
                 </Scroll>
             </ListItem>
         ))}
-        <Divider style={{color: 'white'}} flexItem/>
+       
         <ListItem>
             <Button 
                 className={classes.toolBarButtons} 

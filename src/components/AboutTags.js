@@ -7,22 +7,36 @@ import TagArray from './TagArray';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        minHeight: '100vh', 
+        // minHeight: '100vh', 
         display: 'flex', 
         justifyContent: 'center', 
-        alignItems: 'center', 
-        textAlign: 'center',
+        alignItems: 'left', 
+        textAlign: 'left',
+        paddingLeft: '50px',
         //marginBottom: '-5rem',   
     },
     title: {
-        fontFamily: 'Alef',
-        fontSize: '3rem',
-        margin: '2rem',
-        color: 'white',
-        marginBottom: '-1rem',
-        textShadow: '2px 2px rgba(252, 96, 96, 0.5)',
-        
+        fontFamily: 'Poppins',
+        fontSize: '4vw',
+        color: 'rgb(0, 0,0,1)',
+      //  textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
+        textAlign: 'left',
+        lineHeight: '99%', 
+        padding: '20px',
+        lineHeight: .9,
+        },
+    tagarray: {
+        maxHeight: '400px',
     },
+
+    tags: {
+        maxWidth: '100%',
+        width: '500px',
+        height: 'auto', 
+        backgroundColor: 'pink',
+        borderRadius: '10px', 
+        padding: '20px',
+    }
 }))
 
 export default function() {
@@ -35,14 +49,18 @@ export default function() {
             justifyContent="center"
             alignItems="center"
             >
-                <Grid item xs={12}>
-                    <h1 className={classes.title}>so, what do you want <br/> to connect about?</h1>
-                </Grid>
-                <Grid item xs={12}>
+                <h1 className={classes.title}>so, what do you want <br/> to connect about?</h1>
+                
+                <Grid item className={classes.tagarray} xs={12}>
                     <TagArray tags={landingPageTags} />
                 </Grid>
 
             </Grid>
+            <div className={classes.tags}>
+                placeholder
+            </div>
+            {/* <img className={classes.tags} src={`${process.env.PUBLIC_URL + '/assets/tags.png'}`}  ></img> */}
+            
         </div>
         
     )
