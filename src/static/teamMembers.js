@@ -53,8 +53,9 @@ const teamMembers = [
         tags: teamMemberTags[4], 
         bio: ` 
                 Born and raised in New Orleans, 
-                Louisiana! When I'm not studying CS,
-                I'm either reading, longboarding, or cooking!
+                Louisiana! You can usually find me reading, 
+                enjoying the sun (while it lasts), or at the 
+                tags below!
 
 
             `,

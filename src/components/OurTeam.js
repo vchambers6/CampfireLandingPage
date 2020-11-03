@@ -24,11 +24,14 @@ const useStyles = makeStyles((theme) => ({
     },
 
     title: {
-        fontFamily: 'Alef',
+        fontFamily: 'Poppins',
         fontSize: '6rem',
         margine: '-1rem',
         color: 'white',
     },
+    card: {
+        height: '100%',
+    }
 }))
 
 
@@ -42,7 +45,8 @@ export default function() {
                 container
                 spacing={2}
                 justify="center"
-                alignItems="center"
+                alignItems="stretch"
+                alignContent="stretch"
             >
                 <Grid item xs={12}>
                 <div className={classes.titleWrapper}>
@@ -53,8 +57,8 @@ export default function() {
                 {
                     teamMembers.map(member => {
                         return (
-                            <Grid item md={2} sm={4} xs={12}>
-                            <TeamMemberCard member={member} checked={checked}/>
+                            <Grid item md={2} sm={4} xs={12} >
+                            <TeamMemberCard member={member} checked={checked} className={classes.card}/>
                             </Grid>
                         )
                     })

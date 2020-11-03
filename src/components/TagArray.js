@@ -14,11 +14,14 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(0.5),
     },
-    fontFamily: 'Alef',
+    fontFamily: 'Poppins',
   },
   chip: {
     backgroundColor: '#ffffff',
     display: 'flex',
+    outlined: {
+      color: '#000'
+    },
     
   },
   icon: {
@@ -28,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   }, 
 }));
 
-export default function Chips({tags, size}) {
+export default function Chips({tags, chipStyle}) {
   const classes = useStyles();
 
   const handleDelete = () => {
@@ -46,8 +49,10 @@ export default function Chips({tags, size}) {
       {tags.map(tag => {
           return (
             <Chip 
-                size={size}
+                size={chipStyle.size}
+                variant={chipStyle.variant}
                 id="chip"
+                clickable={false}
                 className={classes.chip}
                 icon={<Icon className={classes.icon} style={{backgroundColor: tag.color}}/>}
                 label={tag.title}

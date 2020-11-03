@@ -13,11 +13,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center', 
         alignItems: 'center',
         height: '100vh',
-        fontFamily: 'Alef',
+        fontFamily: 'Poppins',
         width: '100vw',
     },
     appbar: {
-        background: '#ff9999',    
+        background: 'rgb(255, 143, 143, 1)',    
         position: 'fixed',
         //height: 50,
         display: 'flex',

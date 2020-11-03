@@ -17,7 +17,7 @@ const ColorButton = withStyles((theme) => ({
       backgroundColor: 'rgba(255, 112, 112, 0.5)',
       textTransform: 'none', 
       '&:hover': {
-        backgroundColor: '#ff5c5c',
+        backgroundColor: 'rgb(255, 143, 143)',
         color: '#fff', 
       },
       display: 'flex',
@@ -29,9 +29,9 @@ const ColorButton = withStyles((theme) => ({
     root: {
         color: 'rgba(255, 112, 112, 0.5)',
         '&:hover': {
-            color: '#ff5c5c', 
+            color: 'rgb(255, 143, 143)', 
           },
-        fontSize: '3rem',
+        fontSize: '3vw',
         
     },
   }))(ExpandMoreIcon);
@@ -54,44 +54,61 @@ const useStyles = makeStyles((theme) => ({
         height: '100vh',
         width: '100vw',
     }, 
-    fire: {
-        maxWidth: '400px',
+    connect: {
+        maxWidth: '450px',
         width: '100%',
     },
     text: {
-        marginLeft: '-50px%'
+        fontFamily: 'Poppins',
+        color: 'rgb(0, 0, 0, 1)',
+        lineHeight: 1.1,
     },
     title: {
-        fontSize: '9vw',
-        color: 'black',
-        textShadow: '4px 4px rgba(0, 0, 0, 0.3)',
+        fontFamily: 'Poppins',
+        fontSize: '6vw',
+        color: 'rgb(255, 143, 143,1)',
+      //  textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
         lineHeight: '99%', 
+        padding: '20px',
+        lineHeight: .9,
     },
 
     subtitle: {
+        fontFamily: 'Poppins',
         marginTop: '-15%',
         fontSize: '3vw',
+        padding: '20px',
+        lineHeight: 1,
     },
     boxes: {
-        marginTop: '-30px',  
+        marginTop: '-30px',
+        fontWeight: '500',
+        
+        
     },
     joinNowBox: {
         background: 'rgba(255, 153, 153, 0.5)',
         borderRadius: '6px',
-        padding: '10px',
+        height: '100%',
         
     },
-    
+
     learnMoreBox: {
         background: 'rgba(196, 196, 196, 0.5)',
         borderRadius: '6px',
-        padding: '10px',
-        
-    },
-    boxesText: {
-        fontSize: '2vw',
+        height: '100%',
+
     },
 
+    boxesText: { 
+        marginTop: '5%', 
+        marginBottom: '5%',
+        padding: '3px', 
+        textAlign: 'center', 
+        fontFamily: 'Poppins', 
+        fontSize: '1.8vw', 
+        color: 'rgba(0,0,0,0.7)'
+    }
 
 })) 
 
@@ -108,7 +125,7 @@ export default function HeaderMainContent() {
             >
                  <Grid item xs={4}>
                     <div>
-                        <img src={`${process.env.PUBLIC_URL + '/assets/fire.png'}`}  className={classes.fire}></img>
+                        <img src={`${process.env.PUBLIC_URL + '/assets/connect.png'}`}  className={classes.connect}></img>
                     </div>             
                 </Grid>
                 
@@ -121,62 +138,55 @@ export default function HeaderMainContent() {
                            
                         >
                             <Grid item xs={12}>
-                            <Typography noWrap><h1 className={classes.title}>campfire <br/> convos </h1></Typography>
+                            <Typography noWrap><h1 className={classes.title}>campfire <br/> <div style={{color: 'black'}}>convos</div> </h1></Typography>
                                 
                             </Grid>
 
                             <Grid item xs={12}>
-                                
-                                <p className={classes.subtitle}> an online platform reimagining <br/> <b style={{color: '#ff9999'}}> campus communities. </b></p> 
+                                {/* make campfire bold and convos thin? */}
+                                <p className={classes.subtitle}> an online platform reimagining <br/> <b style={{color: 'rgb(255, 143, 143, 0.8)'}}> campus communities. </b></p> 
                             </Grid>
-
-                            {/* BUTTONS BELOW MAIN TEXT */}
+                            
                             <Grid item xs={12}>
-                                <Grid container direction='row' alignItems='stretch' spacing={2}>
-
-                                    {/* REGISTER NOW BUTTON */}
-                                    <Grid item xs={6} className={classes.boxes}>
-                                        <Box height='100%'  className={classes.joinNowBox}> 
-                                            <Grid container direction='column' justify='center' alignItems="center" >
-                                                <Grid item xs={12} style={{textAlign: 'center'}}>
-                                                    <Box> <Typography className={classes.boxesText}> live at {campusCount} schools and counting. <br/> join today! </Typography>  </Box>
-                                                </Grid>
-                                                <Grid item xs={12}>
-                                                    <ColorButton
-                                                        onClick={(e) => {
-                                                        e.preventDefault();
-                                                        window.location.href="https://campfireconvos.com/registration";}}
-                                                        className={classes.boxesText}
-                                                    > 
-                                                        <b> register now  </b>
-                                                    </ColorButton> 
-                                                </Grid>
-                                            </Grid>   
-                                        </Box>
+                            <Grid container direction='row' alignItems='stretch' spacing={4}>
+                            <Grid item xs={6} className={classes.boxes}>
+                                <Box display='flex' className={classes.joinNowBox}> 
+                                    <Grid container direction='column' justify='center' alignItems="center" className={classes.boxesText}>
+                                        <Grid item xs={12}>
+                                            <Box> find your community. <br/>join today! </Box>
+                                        </Grid>
+                                        
+                                            <Grid item xs={12}>
+                                                <ColorButton
+                                                    onClick={(e) => {
+                                                    e.preventDefault();
+                                                    window.location.href="https://campfireconvos.com/registration";}}
+                                                > 
+                                                    <b style={{fontSize: '1.7vw'}}> register now  </b>
+                                                </ColorButton> 
+                                            </Grid>
+                                       
+                                    </Grid>
+                                    
+                                </Box>
+                            </Grid>
+                            
+                            <Grid item xs={4} className={classes.boxes}>
+                                <Box display='flex' className={classes.learnMoreBox}> 
+                                    <Grid container direction='row' justify='center' alignItems="center" className={classes.boxesText}>
+                                        <Grid item xs={12}>
+                                            <Box> learn more about us.</Box>
+                                        </Grid>
+                                        <Grid item xs={12}> <Scroll to="about" smooth={true}> <CustomExpandMore /> </Scroll> </Grid>
                                     </Grid>
 
-                                    {/* LEARN MORE ABOUT CC BUTTON */}
-                                    <Grid item xs={4} className={classes.boxes}>
-                                        <Box height='100%' className={classes.learnMoreBox}> 
-                                            <Grid container direction='column' justify='center' alignItems="center" className={classes.learnMoreText}>
-                                                <Grid item xs={12} style={{textAlign: 'center'}}>
-                                                    <Box> <Typography className={classes.boxesText}> find out more about campfire! </Typography>  </Box>
-                                                </Grid>
-                                                <Grid item xs={12}> <Scroll to="about" smooth={true}> <CustomExpandMore /> </Scroll> </Grid>
-                                            </Grid>   
-                                        </Box>
-                                    </Grid>
-
-                                </Grid>
+                                </Box>
                             </Grid> {/* END OF BUTTONS BELOW MAIN TEXT */}
-                            
-                            
-                            
-                            
-                            
+                            </Grid>
+                            </Grid> {/* CONTAINER FOR BUTTONS */}
+                        
                         </Grid>
                          
-                    {/*</Collapse> */}
                 </Grid>
 
             </Grid>

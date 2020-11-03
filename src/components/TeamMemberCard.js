@@ -14,15 +14,19 @@ import TagArray from './TagArray';
 const useStyles = makeStyles({
   root: {
     maxWidth: 350,
-    background: 'linear-gradient(45deg, #ff8299 30%, #FF8E53 90%)', 
+    background: 'linear-gradient(45deg, #ff9999 30%, #ff9933 90%)', 
+    // prev gradient color #FF8E53 
     //margin: '10px', 
     borderRadius: 15,
     boxShadow: '0 4px 7px 3px rgba(255, 142, 164, 0.3)',
     justifyContent: "center",
     alignItems: "center",
+    fontFamily: 'Poppins', 
+    textAlign: "center",
+    color: "#fff", 
   },
   media: {
-    margin: '25px',
+    marginTop: '10px',
     justifyItems: 'center',
     height: 100,
     width: 100,
@@ -34,34 +38,25 @@ const useStyles = makeStyles({
       marginRight: 'auto',
   },
   title: {
-    fontFamily: 'Alef', 
     fontWeight: 'bold', 
     fontSize: '2rem', 
-    textAlign: "center",
-    color: "#fff", 
-  }, 
-  desc: {
-    fontFamily: 'Alef',
-    fontWeight: '900',
-    fontSize: '1.1rem', 
-    color: "#fff",
-    textAlign: "center",
-  },
-  content: {
     
-  },
+    
+  }, 
   bio: {
     fontSize: '0.9rem',
     textAlign: "center",
     color: "#fff",
+    marginBottom: '-10px',
   },
   tagArray: {
-    marginBottom: '30px', 
+    marginBottom: '10px', 
   }
 });
 
 export default function ImageCard({ member, checked}) {
   const classes = useStyles();
+  const chipStyle = {size: 'small', border: '#000', variant: 'default'}
 
   return (
     <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} >
@@ -89,9 +84,6 @@ export default function ImageCard({ member, checked}) {
             >
               {member.name}
             </Typography>
-            <Typography variant="h6" color="textSecondary" component="h1" className={classes.desc}>
-              {member.description}
-            </Typography>
 
             <Typography variant="body1" color="textSecondary" component="p" className={classes.bio}>
               {member.bio}
@@ -101,7 +93,7 @@ export default function ImageCard({ member, checked}) {
         </Grid>
 
         <Grid item xs={12} className={classes.tagArray}>
-            <TagArray tags={member.tags} size="small"/>
+            <TagArray tags={member.tags} size="small" chipStyle={chipStyle} />
         </Grid>
       </Grid>     
     </Card>
