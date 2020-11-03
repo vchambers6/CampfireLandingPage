@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         lineHeight: '99%', 
         paddingLeft: '35px',
-        lineHeight: .9,
+
     },
     formContainer: {
         width: '100%',
@@ -44,24 +44,14 @@ export default function() {
                 alignItems='center'
             >   
                 <Grid item xs={12}>
-                <h1 className={classes.title}>about</h1>
-                </Grid>
-                
-
-
-                <Grid item xs={12}> 
-
-                        <Grid container>
-                            <Grid item xs={12} className={classes.formContainer}>
-                                <span > <b> Placeholder for contact form</b> </span>
-                            </Grid>
-
-                    
-
-                        </Grid>
+                <h1 className={classes.title}>contact</h1>
                 </Grid>
 
-                
+
+                <Grid item xs={12} className={classes.formContainer}>
+                    <span > <b> Placeholder for contact form</b> </span>
+                </Grid>
+
 
             </Grid>
 
