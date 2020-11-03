@@ -1,2 +1,1 @@
 1. remove learn more from header (refer to about)
-2. 
