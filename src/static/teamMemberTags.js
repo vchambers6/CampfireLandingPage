@@ -75,16 +75,12 @@ const TeamMemberTags = [
             title: "Student Athlete",
             color: idExp,
         }, 
-        /*{
+        {
             title: "Vegan", 
             color: idExp,
-        },*/
-        {
-            title: "Harvard Class of 2024", 
-            color: idExp, 
         },
         {
-            title: "California", 
+            title: "Computer Science", 
             color: idExp,
         },
         {

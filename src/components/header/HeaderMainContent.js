@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import { createMuiTheme, makeStyles, withStyles } from '@material-ui/core/styles';
-import { AppBar, Collapse, IconButton, Typography, Toolbar, Button, Grid, Divider, Box} from '@material-ui/core';
+import { AppBar, Collapse, IconButton, Typography, Toolbar, Button, Grid, Divider, Box } from '@material-ui/core';
 import schools from '../../static/schoolsOnboard.json' ;
 import { green, purple, pink} from '@material-ui/core/colors';
 import { Link as Scroll} from 'react-scroll'
