@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontFamily: 'Poppins',
         fontSize: '5vw',
+        weight: '400',
         color: 'rgb(255, 143, 143,1)',
       //  textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
         textAlign: 'left',

@@ -56,6 +56,7 @@ export default function Chips({tags, chipStyle}) {
                 className={classes.chip}
                 icon={<Icon className={classes.icon} style={{backgroundColor: tag.color}}/>}
                 label={tag.title}
+                style= {{fontFamily: 'Poppins'}}
                 onClick={handleClick}
             />     
            )

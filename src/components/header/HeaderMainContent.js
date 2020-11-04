@@ -123,13 +123,13 @@ export default function HeaderMainContent() {
                 justify="center"
                 alignItems="center"
             >
-                 <Grid item xs={4}>
+                 <Grid item xs={12} md={4}>
                     <div>
                         <img src={`${process.env.PUBLIC_URL + '/assets/connect.png'}`}  className={classes.connect}></img>
                     </div>             
                 </Grid>
                 
-                <Grid item xs={6} className={classes.text}>
+                <Grid item xs={12} md={6} className={classes.text}>
                     {/*<Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapsedHeight={50}> */}
                         <Grid container 
                             spacing={2}

@@ -5,6 +5,7 @@ import { Link as Scroll} from 'react-scroll'
 import Drawer from './Drawer';
 import HeadMainContent from './HeaderMainContent';
 import HeaderMainContent from './HeaderMainContent';
+import { NearMeSharp } from '@material-ui/icons';
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -74,6 +75,7 @@ export default function Header() {
     }, [])
 
     var toolBarItems = [["about", "about"], ["learnMore", "learn more"], ["ourTeam", "our team"], ]
+    const names = ['register', 'login']
     
     return(
         <div className={classes.root} id='header'>
@@ -91,32 +93,34 @@ export default function Header() {
                             {toolBarItems.map(toolBarItem => {
                             return ( 
                                 <Scroll to={toolBarItem[0]} smooth={true}>
-                                    <Button className={classes.toolBarButtons} style={{textTransform: 'none'}}>
+                                    <Button className={classes.toolBarButtons} style={{textTransform: 'none', fontFamily: 'Poppins'}}>
                                         {toolBarItem[1]}
                                     </Button>
                                 </Scroll>
                             )})}  
+                            
                             <Divider orientation='vertical' style={{color: 'white'}} flexItem/> 
-                            <Button 
-                                className={classes.toolBarButtons} 
-                                style={{textTransform: 'none'}}
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    window.location.href="https://campfireconvos.com/registration";
-                                }}
-                            >
-                                register
-                            </Button>    
-                            <Button 
-                                className={classes.toolBarButtons} 
-                                style={{textTransform: 'none'}}
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    window.location.href="https://campfireconvos.com/login";
-                                }}
-                            >
-                                log in
-                            </Button>       
+                            
+                            
+                            
+                            <div>
+                                {names.map (name => {
+                                    return (
+                                        <Button 
+                                            className={classes.toolBarButtons} 
+                                            style={{textTransform: 'none', fontFamily: 'Poppins'}}
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                name === 'register' ? window.location.href="https://campfireconvos.com/registration" : 
+                                                window.location.href="https://campfireconvos.com/login" ;
+                                            }}
+                                        >
+                                           {name} 
+                                        </Button>
+                                    )
+                                 })}
+                            </div>   
+                                  
                     </Grid>
                     <div className={classes.icon}>
                         <Drawer />

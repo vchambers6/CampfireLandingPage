@@ -48,6 +48,7 @@ export default function Drawer() {
   };
 
   var toolBarItems = [["about", "about"], ["learnMore", "learn more"], ["ourTeam", "our team"], ];
+  const names = ['register', 'login'];
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {
@@ -62,38 +63,30 @@ export default function Drawer() {
         {toolBarItems.map(toolBarItem => (
             <ListItem>
                 <Scroll to={toolBarItem[0]} smooth={true}>
-                    <Button className={classes.toolBarButtons} style={{ftextTransform: 'none'}}>
+                    <Button className={classes.toolBarButtons} style={{textTransform: 'none', fontFamily: 'Poppins'}}>
                         {toolBarItem[1]}
                     </Button>
                 </Scroll>
             </ListItem>
         ))}
-       
-        <ListItem>
-            <Button 
-                className={classes.toolBarButtons} 
-                style={{textTransform: 'none'}}
-                onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href="https://campfireconvos.com/registration";
-                }}
-            >
-                register
-            </Button>  
-        </ListItem>
 
-        <ListItem>
-          <Button 
-              className={classes.toolBarButtons} 
-              style={{textTransform: 'none'}}
-              onClick={(e) => {
-                  e.preventDefault();
-                  window.location.href="https://campfireconvos.com/login";
-              }}
-          >
-              log in
-          </Button> 
-        </ListItem>
+        {names.map (name => {
+            return (
+                <ListItem>
+                <Button 
+                    className={classes.toolBarButtons} 
+                    style={{textTransform: 'none', fontFamily: 'Poppins'}}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        name === 'register' ? window.location.href="https://campfireconvos.com/registration" : 
+                        window.location.href="https://campfireconvos.com/login" ;
+                    }}
+                >
+                    {name} 
+                </Button>
+                </ListItem>
+            )
+          })}
       </List>
     </div>
   );

@@ -61,12 +61,12 @@ export default function() {
             >
                 
                 
-                <Grid item className={classes.section} xs={8}>
+                <Grid item className={classes.section} xs={12} md={8} >
                     <h1 className={classes.title}>so, what do you want <br/> to connect about?</h1>
                     <TagArray tags={landingPageTags} chipStyle={chipStyle} />
                 </Grid>
 
-                <Grid item className={classes.section} xs={4}>
+                <Grid item className={classes.section} xs={12} md={4}>
                     <Box className={classes.box}>
                     placeholder
                     </Box>

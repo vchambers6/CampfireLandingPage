@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         lineHeight: '99%', 
         paddingLeft: '35px',
-
     },
     formContainer: {
         width: '100%',
