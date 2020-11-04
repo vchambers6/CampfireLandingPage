@@ -58,7 +58,7 @@ export default function() {
                 {
                     teamMembers.map(member => {
                         return (
-                            <Grid item md={2} sm={4} xs={12} >
+                            <Grid item md={2} sm={4} xs={6} >
                             <TeamMemberCardExpanded member={member} checked={checked} className={classes.card}/>
                             </Grid>
                         )
