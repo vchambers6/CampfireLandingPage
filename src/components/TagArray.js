@@ -23,6 +23,10 @@ const useStyles = makeStyles((theme) => ({
       color: '#000'
     },
     
+    
+  },
+  chipStyles: {
+    borderColor: 'black',
   },
   icon: {
     borderRadius: '50%', 
@@ -52,6 +56,7 @@ export default function Chips({tags, chipStyle}) {
                 size={chipStyle.size}
                 variant={chipStyle.variant}
                 id="chip"
+                classes={{root: classes.chipStyles}}
                 clickable={false}
                 className={classes.chip}
                 icon={<Icon className={classes.icon} style={{backgroundColor: tag.color}}/>}

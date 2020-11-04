@@ -5,6 +5,7 @@ import { CssBaseline, Grid } from '@material-ui/core';
 import useWindowPosition from '../hook/useWindowPosition';
 import teamMembers from "../static/teamMembers";
 import TeamMemberCard from './TeamMemberCard';
+import TeamMemberCardExpanded from './TeamMemberCardExpanded';
 import TagArray from './TagArray';
 import teamMemberTags from "../static/teamMemberTags";
 
@@ -58,7 +59,7 @@ export default function() {
                     teamMembers.map(member => {
                         return (
                             <Grid item md={2} sm={4} xs={12} >
-                            <TeamMemberCard member={member} checked={checked} className={classes.card}/>
+                            <TeamMemberCardExpanded member={member} checked={checked} className={classes.card}/>
                             </Grid>
                         )
                     })

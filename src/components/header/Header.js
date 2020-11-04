@@ -57,6 +57,9 @@ const useStyles = makeStyles((theme) => ({
         alignSelf: 'right',
 
     },
+    dividerColor: {
+        background: 'white'
+    },
     goDown: {
         color: '#ff9f87', 
         fontSize: '4rem',
@@ -74,7 +77,7 @@ export default function Header() {
         setChecked(true)
     }, [])
 
-    var toolBarItems = [["about", "about"], ["learnMore", "learn more"], ["ourTeam", "our team"], ]
+    var toolBarItems = [["about", "about"], ["ourTeam", "our team"], ]
     const names = ['register', 'login']
     
     return(
@@ -99,7 +102,7 @@ export default function Header() {
                                 </Scroll>
                             )})}  
                             
-                            <Divider orientation='vertical' style={{color: 'white'}} flexItem/> 
+                            <Divider classes={{root: classes.dividerColor}} orientation='vertical' flexItem/> 
                             
                             
                             

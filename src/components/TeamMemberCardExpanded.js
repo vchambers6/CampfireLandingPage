@@ -10,8 +10,11 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Collapse  } from '@material-ui/core';
 import TagArray from './TagArray';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import clsx from 'clsx';
+import IconButton from '@material-ui/core/IconButton';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 350,
     background: 'linear-gradient(45deg, #ff9999 30%, #ff9933 90%)', 
@@ -24,6 +27,8 @@ const useStyles = makeStyles({
     fontFamily: 'Poppins', 
     textAlign: "center",
     color: "#fff", 
+    marginLeft: 'auto',
+      marginRight: 'auto',
   },
   media: {
     marginTop: '10px',
@@ -40,23 +45,41 @@ const useStyles = makeStyles({
   title: {
     fontWeight: 'bold', 
     fontSize: '2rem', 
-    
-    
+    marginBottom: '-20px', 
   }, 
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    color: '#fff',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
+  expandContent: {
+    padding: '5px',
+  },
   bio: {
-    fontSize: '0.9rem',
+    fontSize: '1rem',
     textAlign: "center",
     color: "#fff",
-    marginBottom: '-10px',
+    padding: '10px',
   },
   tagArray: {
     marginBottom: '10px', 
   }
-});
+}));
 
 export default function ImageCard({ member, checked}) {
   const classes = useStyles();
   const chipStyle = {size: 'small', border: '#000', variant: 'default'};
+  const [expanded, setExpanded] = React.useState(false);
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
 
   return (
     <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} >
@@ -84,18 +107,40 @@ export default function ImageCard({ member, checked}) {
             >
               {member.name}
             </Typography>
-
+          </CardContent>
+        </Grid>
+      </Grid>
+      <CardActions>
+        <IconButton
+            className={clsx(classes.expand, {
+              [classes.expandOpen]: expanded,
+            })}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon style={{fontSize: '2rem'}}/>
+          </IconButton>
+      </CardActions> 
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <Grid
+          container
+          alignItems="center"
+          justifyContent= "center"
+          justify="center"
+          className={classes.expandContent}
+        >
+          <Grid item xs={12}>
             <Typography variant="body1" color="textSecondary" component="p" className={classes.bio}>
               {member.bio}
             </Typography>
+          </Grid>
 
-          </CardContent>
-        </Grid>
-
-        <Grid item xs={12} className={classes.tagArray}>
+          <Grid item xs={12} className={classes.tagArray}>
             <TagArray tags={member.tags} size="small" chipStyle={chipStyle} />
+          </Grid>
         </Grid>
-      </Grid>   
+      </Collapse>    
     </Card>
     </Collapse>
   );

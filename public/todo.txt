@@ -1,1 +1,8 @@
-1. remove learn more from header (refer to about)
+1. remove learn more from header (refer to about) -- DONE 
+2. update react map to fit design of static map
+    - map bg
+    - map icons
+    - highlight icons 
+3. change cards to expand on small browser -- created expandable card, not implemented to accomodate screen size
+4. center cards -- DONE 
+5. change divider color -- DONE 

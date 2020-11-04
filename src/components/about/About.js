@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { MovieFilter } from '@material-ui/icons';
 import { CssBaseline, Grid } from '@material-ui/core';
 import AboutTags from './AboutTags';
-import Map from '../Map'
+import Map from './MapTest3'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -73,7 +73,8 @@ export default function() {
                             </Grid>
 
                             <Grid item xs={12}>
-                                <img src={`${process.env.PUBLIC_URL + '/assets/map.png'}`}  className={classes.connect}></img>
+                                {/*<img src={`${process.env.PUBLIC_URL + '/assets/map.png'}`}  className={classes.connect}></img> */}
+                                <Map />
                             </Grid>
 
                         </Grid>
