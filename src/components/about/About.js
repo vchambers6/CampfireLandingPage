@@ -24,16 +24,17 @@ const useStyles = makeStyles((theme) => ({
       //  textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
         textAlign: 'left',
         lineHeight: '99%', 
+        paddingTop: '20px',
         paddingLeft: '35px',
         lineHeight: .9,
         },
 
     mapText: {
         color: 'black',
-        fontSize: '2rem', 
-        //paddingLeft: '20px',
-        //paddingTop: '30px',
-        //paddingBottom: '30px',
+        fontSize: '3vw', 
+        paddingLeft: '20px',
+        paddingTop: '30px',
+        paddingBottom: '30px',
     }, 
 
     mapContainer: {
@@ -58,26 +59,34 @@ export default function() {
                 <h1 className={classes.title}>about</h1>
                 </Grid>
                 
+                {/* mission | screenshot */}
 
-                <Grid item xs={12} id="aboutTags">
-                    <AboutTags />
-                </Grid>
 
                 <Grid item xs={12}> 
 
-                        <Grid container className={classes.mapContainer}>
-                            <Grid item xs={12} className={classes.mapText}>
-                                <span > <b> Enriching campus communities. </b> </span>
-                                <img style={{width: '50%'}}src={`${process.env.PUBLIC_URL + '/assets/world.png'}`}  className={classes.connect}></img>
-
-                            </Grid>
-
-                            <Grid item xs={12}>
-                                {/*<img src={`${process.env.PUBLIC_URL + '/assets/map.png'}`}  className={classes.connect}></img> */}
-                                <Map />
-                            </Grid>
-
+                    <Grid container className={classes.mapContainer}>
+                        <Grid item xs={12} className={classes.mapText}>
+                            <span > <b> Enriching campus communities. </b> </span>
                         </Grid>
+
+                    </Grid>
+
+                {/* connect | chat | community icons */}
+                    
+                    <Grid container>
+                        <Grid item xs={12}>
+                            <img style={{width: '20%'}}src={`${process.env.PUBLIC_URL + '/assets/world.png'}`} ></img>
+                            <h2 style={{paddingLeft: '20px'}}>connect</h2>
+                        </Grid>
+                    </Grid>
+                    
+
+                </Grid>
+
+
+
+                <Grid item xs={12} id="aboutTags">
+                    <AboutTags />
                 </Grid>
 
                 

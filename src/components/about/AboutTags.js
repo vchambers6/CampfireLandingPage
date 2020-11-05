@@ -27,9 +27,9 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '4vw',
         color: 'rgb(0, 0,0,1)',
       //  textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
-        textAlign: 'left',
+        textAlign: 'center',
         lineHeight: '99%', 
-        padding: '20px',
+        padding: '15px',
         lineHeight: .9,
         },
     section: {
@@ -62,7 +62,7 @@ export default function() {
                 
                 
                 <Grid item className={classes.section} xs={12} md={8} >
-                    <h1 className={classes.title}>so what do you want <br/> to connect about?</h1>
+                    <h1 className={classes.title}>so, what do you want <br/> to connect about?</h1>
                     <TagArray tags={landingPageTags} chipStyle={chipStyle} />
                 </Grid>
 
