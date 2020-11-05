@@ -13,6 +13,8 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'left', 
         textAlign: 'left',
         paddingLeft: '50px',
+        textAlign: 'center',
+        color: 'black',
         //marginBottom: '-5rem',   
     },
 
@@ -27,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '4vw',
         color: 'rgb(0, 0,0,1)',
       //  textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
-        textAlign: 'left',
         lineHeight: '99%', 
         padding: '20px',
         lineHeight: .9,
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 
     box: {
         maxWidth: '100%',
-        width: '500px',
+        width: '100px',
         height: '100%',
         backgroundColor: 'pink',
         borderRadius: '10px', 
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function() {
     const classes = useStyles();  
-    const chipStyle = {size: 'medium', border: '#000', outlined: 'outlined'}
+    const chipStyle = {size: 'medium', border: '#000', variant: 'outlined'}
     return (
         <div className={classes.root} id="about">
             <Grid
@@ -61,17 +62,10 @@ export default function() {
             >
                 
                 
-                <Grid item className={classes.section} xs={12} md={8} >
+                <Grid item className={classes.section} xs={12}>
                     <h1 className={classes.title}>so, what do you want <br/> to connect about?</h1>
                     <TagArray tags={landingPageTags} chipStyle={chipStyle} />
                 </Grid>
-
-                <Grid item className={classes.section} xs={12} md={4}>
-                    <Box className={classes.box}>
-                    placeholder
-                    </Box>
-                </Grid>
-
             </Grid>
             
             {/* <img className={classes.tags} src={`${process.env.PUBLIC_URL + '/assets/tags.png'}`}  ></img> */}

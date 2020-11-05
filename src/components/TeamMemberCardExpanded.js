@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ImageCard({ member, checked}) {
   const classes = useStyles();
-  const chipStyle = {size: 'small', border: '#000', variant: 'default'};
+  const chipStyle = {size: 'small', variant: 'default'};
   const [expanded, setExpanded] = React.useState(false);
   const handleExpandClick = () => {
     setExpanded(!expanded);

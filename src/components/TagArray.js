@@ -20,18 +20,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#ffffff',
     display: 'flex',
     outlined: {
-      color: '#000'
+      color: '#000',
+      outlineColor: '#000',
     },
     
     
   },
-  chipStyles: {
-    borderColor: 'black',
-  },
   icon: {
     borderRadius: '50%', 
-    height: '20px',
-    width: '20px',
+    height: '15px',
+    width: '15px',
   }, 
 }));
 
@@ -53,7 +51,7 @@ export default function Chips({tags, chipStyle}) {
       {tags.map(tag => {
           return (
             <Chip 
-                size={chipStyle.size}
+                size='small'
                 variant={chipStyle.variant}
                 id="chip"
                 classes={{root: classes.chipStyles}}
@@ -61,7 +59,7 @@ export default function Chips({tags, chipStyle}) {
                 className={classes.chip}
                 icon={<Icon className={classes.icon} style={{backgroundColor: tag.color}}/>}
                 label={tag.title}
-                style= {{fontFamily: 'Poppins'}}
+                style={{fontFamily: 'Poppins'}}
                 onClick={handleClick}
             />     
            )

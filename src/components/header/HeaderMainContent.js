@@ -48,43 +48,36 @@ const ColorButton = withStyles((theme) => ({
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        minHeight: '100vh', 
         display: 'flex', 
         justifyContent: 'center', 
-        alignItems: 'center',
-        height: '100vh',
-        width: '100vw',
+        alignItems: 'center', 
+        flexWrap: 'wrap',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     }, 
     connect: {
         maxWidth: '450px',
         width: '100%',
     },
     text: {
-        fontFamily: 'Poppins',
-        color: 'rgb(0, 0, 0, 1)',
-        lineHeight: 1.1,
+        lineHeight: .0001,
     },
     title: {
         fontFamily: 'Poppins',
-        fontSize: '6vw',
+        fontSize: 'calc(3rem + 4vw)',
         color: 'rgb(255, 143, 143,1)',
       //  textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
-        lineHeight: '99%', 
-        padding: '20px',
         lineHeight: .9,
     },
 
     subtitle: {
         fontFamily: 'Poppins',
-        marginTop: '-15%',
-        fontSize: '3vw',
-        padding: '20px',
+        fontSize: '2.5rem',
         lineHeight: 1,
     },
     boxes: {
-        marginTop: '-30px',
-        fontWeight: '500',
-        
-        
+        fontWeight: '500',  
     },
     joinNowBox: {
         background: 'rgba(255, 153, 153, 0.5)',
@@ -129,66 +122,61 @@ export default function HeaderMainContent() {
                     </div>             
                 </Grid>
                 
-                <Grid item xs={12} md={6} className={classes.text}>
+                <Grid item container 
+                    xs={12} md={6} 
+                    
+                    spacing={1}
+                    justify='flex-start'
+                    alignItems="center"
+                >
                     {/*<Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapsedHeight={50}> */}
-                        <Grid container 
-                            spacing={2}
-                            justify='flex-start'
-                            alignItems="center"
-                           
-                        >
-                            <Grid item xs={12}>
-                            <Typography noWrap><h1 className={classes.title}>campfire <br/> <div style={{color: 'black'}}>convos</div> </h1></Typography>
-                                
-                            </Grid>
-
-                            <Grid item xs={12}>
-                                {/* make campfire bold and convos thin? */}
-                                <p className={classes.subtitle}> an online platform reimagining <br/> <b style={{color: 'rgb(255, 143, 143, 0.8)'}}> campus communities. </b></p> 
-                            </Grid>
+                    <Grid item xs={12} >
+                        <div className={classes.text}> 
+                        <h1 className={classes.title}>campfire <br/> <div style={{color: 'black'}}>convos</div> </h1>
+                        <br/>
+                        <p className={classes.subtitle}> an online platform reimagining <br/> <b style={{color: 'rgb(255, 143, 143, 0.8)'}}> campus communities. </b></p> 
+                        </div>
+                    </Grid>
                             
-                            <Grid item xs={12}>
-                            <Grid container direction='row' alignItems='stretch' spacing={4}>
-                            <Grid item xs={6} className={classes.boxes}>
-                                <Box display='flex' className={classes.joinNowBox}> 
-                                    <Grid container direction='column' justify='center' alignItems="center" className={classes.boxesText}>
-                                        <Grid item xs={12}>
-                                            <Box> find your community. <br/>join today! </Box>
-                                        </Grid>
+                    <Grid item container  
+                        direction='row' 
+                        alignItems='stretch' 
+                        spacing={4} 
+                        xs={12}
+                    >
+                        <Grid item xs={12} md={6} className={classes.boxes}>
+                            <Box display='flex' className={classes.joinNowBox}> 
+                                <Grid container direction='column' justify='center' alignItems="center" className={classes.boxesText}>
+                                    <Grid item xs={12}>
+                                        <Box> find your community. <br/>join today! </Box>
+                                    </Grid>
                                         
-                                            <Grid item xs={12}>
-                                                <ColorButton
-                                                    onClick={(e) => {
-                                                    e.preventDefault();
-                                                    window.location.href="https://campfireconvos.com/registration";}}
-                                                > 
-                                                    <b style={{fontSize: '1.7vw'}}> register now  </b>
-                                                </ColorButton> 
-                                            </Grid>
+                                    <Grid item xs={12}>
+                                        <ColorButton
+                                            onClick={(e) => {
+                                            e.preventDefault();
+                                            window.location.href="https://campfireconvos.com/registration";}}
+                                        > 
+                                            <b style={{fontSize: '1.7vw'}}> register now  </b>
+                                        </ColorButton> 
+                                    </Grid>
                                        
-                                    </Grid>
-                                    
-                                </Box>
-                            </Grid>
-                            
-                            <Grid item xs={4} className={classes.boxes}>
-                                <Box display='flex' className={classes.learnMoreBox}> 
-                                    <Grid container direction='row' justify='center' alignItems="center" className={classes.boxesText}>
-                                        <Grid item xs={12}>
-                                            <Box> learn more about us.</Box>
-                                        </Grid>
-                                        <Grid item xs={12}> <Scroll to="about" smooth={true}> <CustomExpandMore /> </Scroll> </Grid>
-                                    </Grid>
-
-                                </Box>
-                            </Grid> {/* END OF BUTTONS BELOW MAIN TEXT */}
-                            </Grid>
-                            </Grid> {/* CONTAINER FOR BUTTONS */}
-                        
+                                </Grid>      
+                            </Box>
                         </Grid>
-                         
-                </Grid>
-
+                            
+                        <Grid item xs={12} md={4} className={classes.boxes}>
+                            <Box display='flex' className={classes.learnMoreBox}> 
+                                <Grid container direction='row' justify='center' alignItems="center" className={classes.boxesText}>
+                                    <Grid item xs={12}>
+                                        <Box> learn more about us.</Box>
+                                    </Grid>
+                                    <Grid item xs={12}> <Scroll to="about" smooth={true}> <CustomExpandMore /> </Scroll> </Grid>
+                                </Grid>
+                            </Box>
+                        </Grid> {/* END OF BUTTONS BELOW MAIN TEXT */}
+                    </Grid> {/* CONTAINER FOR BUTTONS */}        
+                </Grid> {/* END OF TEXT GRID */}
             </Grid>
         </div>
     )
