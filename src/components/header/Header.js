@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex', 
         justifyContent: 'center', 
         alignItems: 'center',
-        height: '100vh',
+        minHeight: '100vh', 
         fontFamily: 'Poppins',
         width: '100vw',
     },
@@ -65,8 +65,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '4rem',
     },
     mainContent: {
-        marginTop: '10%',
-        height: '100vh',
+        marginTop: '40px',
     }
 })) 
 
