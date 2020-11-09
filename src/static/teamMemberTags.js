@@ -5,25 +5,25 @@ locations - #ff6b84
 identity/experience - #f9c642
 */
 
-const academics = '#4aa564';
-const orgs = '#00a6d2';
-const locations = '#f9c642';
-const idExp = '#ff6b84';
+const academics = '#d0cde1';
+const orgs = '#36354c';
+const locations = '#f2f2f2';
+const idExp = '#ff8f8f';
 
 const TeamMemberTags = [
     [
         // Anri
         {
             title: "Toronto Blue Jays", 
-            color: idExp,
+            color: academics,
         },
         {
             title: "Astronomy", 
-            color: idExp,
+            color: orgs,
         },
         {
             title: "Ketchup Chips",
-            color: idExp,
+            color: locations,
         }, 
         {
             title: "Bagged Milk", 
@@ -35,11 +35,11 @@ const TeamMemberTags = [
         // Jenny 
         {
             title: "Broadway Jazz",
-            color: idExp,
+            color: locations,
         }, 
         {
             title: "Science Fiction", 
-            color: idExp,
+            color: academics,
         },
         {
             title: "Sketching", 
@@ -47,7 +47,7 @@ const TeamMemberTags = [
         },
         {
             title: "Racquet Sports", 
-            color: idExp,
+            color: orgs,
         },
     ],
 
@@ -58,30 +58,30 @@ const TeamMemberTags = [
         },
         {
             title: "Musicals", 
-            color: idExp,
+            color: orgs,
         },
         {
             title: "Women in Tech", 
-            color: idExp,
+            color: locations,
         },
         {
             title: "Sports", 
-            color: idExp,
+            color: academics,
         },  
     ],
 
     [
         {
             title: "Student Athlete",
-            color: idExp,
+            color: academics,
         }, 
         {
             title: "Vegan", 
-            color: idExp,
+            color: locations,
         },
         {
-            title: "Computer Science", 
-            color: idExp,
+            title: "CS", 
+            color: orgs,
         },
         {
             title: "Social Justice", 
@@ -96,15 +96,15 @@ const TeamMemberTags = [
         },
         {
             title: "BIPOC", 
-            color: idExp,
+            color: academics,
         },
         {
             title: "Animation", 
-            color: idExp,
+            color: orgs,
         },
         {
             title: "MIT Gymnastics", 
-            color: idExp,
+            color: locations,
         },
     ],
 ];

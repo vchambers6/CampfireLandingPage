@@ -26,9 +26,10 @@ const useStyles = makeStyles((theme) => ({
 
     title: {
         fontFamily: 'Poppins',
-        fontSize: '4vw',
-        color: 'rgb(0, 0,0,1)',
-      //  textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
+        fontSize: '2rem',
+        color: 'rgb(0,0,0,1)',
+        fontWeight: 'bold',
+        color: 'rgb(255, 143, 143,1)',
         lineHeight: '99%', 
         padding: '15px',
         lineHeight: .9,
@@ -63,13 +64,10 @@ export default function() {
                 
                 
                 <Grid item className={classes.section} xs={12}>
-                    <h1 className={classes.title}>so, what do you want <br/> to connect about?</h1>
+                    <h1 className={classes.title}>so, what do you want to connect about?</h1>
                     <TagArray tags={landingPageTags} chipStyle={chipStyle} />
                 </Grid>
             </Grid>
-            
-            {/* <img className={classes.tags} src={`${process.env.PUBLIC_URL + '/assets/tags.png'}`}  ></img> */}
-            
         </div>
         
     )

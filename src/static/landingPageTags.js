@@ -5,10 +5,10 @@ locations - #ff6b84
 identity/experience - #f9c642
 */
 
-const academics = '#4aa564';
-const orgs = '#00a6d2';
-const locations = '#f9c642';
-const idExp = '#ff6b84';
+const academics = '#d0cde1';
+const orgs = '#36354c';
+const locations = '#f2f2f2';
+const idExp = '#ff8f8f';
 
 const landingPageTags = [
     // Anri
