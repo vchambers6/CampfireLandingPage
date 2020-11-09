@@ -32,8 +32,8 @@ const teamMembers = [
         tags: teamMemberTags[2], 
         bio: ` 
                 Working in tech, not enjoying the Seattle gloom currently. 
-                Pop my bubble and chat with me via tags ` + String.fromCodePoint(0x1F642) +  
-                `Connect with y’all soon!`,
+                Pop my bubble and chat with me via tags :)
+                Connect with y’all soon!`,
     }, 
 
     {
@@ -42,7 +42,7 @@ const teamMembers = [
         imageUrl: process.env.PUBLIC_URL + 'assets/Sylvia.png',
         tags: teamMemberTags[3], 
         bio: ` 
-                Runner, plant lover, and Cali native! 
+                Runner, plant lover, and Cali native. 
                 I'm excited about tech that brings people 
                 together — let's start a conversation!
 

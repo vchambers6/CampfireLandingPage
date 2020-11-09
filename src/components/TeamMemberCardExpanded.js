@@ -17,7 +17,7 @@ import IconButton from '@material-ui/core/IconButton';
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 350,
-    background: 'linear-gradient(45deg, #ff9999 30%, #ff9933 90%)', 
+    background: 'linear-gradient(45deg, rgb(64, 60, 86, 0.6) 9%, #FF8F8F 90%)', 
     // prev gradient color #FF8E53 
     //margin: '10px', 
     borderRadius: 15,
@@ -28,23 +28,24 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: "#fff", 
     marginLeft: 'auto',
-      marginRight: 'auto',
+    marginRight: 'auto',
   },
   media: {
     marginTop: '10px',
-    justifyItems: 'center',
-    height: 100,
-    width: 100,
+    height: 115,
+    width: 115,
     objectFit: 'cover',
-    borderRadius: 1,
     position: 'relative',
     display: 'flex',
       marginLeft: 'auto',
       marginRight: 'auto',
+    borderWidth: 1,
+    marginBottom: '0px',
   },
-  title: {
-    fontWeight: 'bold', 
-    fontSize: '2rem', 
+  name: {
+    fontFamily: 'Poppins',
+    fontSize: '1.2rem', 
+    fontWeight: '500',
     marginBottom: '-20px', 
   }, 
   expand: {
@@ -63,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '5px',
   },
   bio: {
+    fontFamily: 'Poppins',
     fontSize: '1rem',
     textAlign: "center",
     color: "#fff",
@@ -95,7 +97,6 @@ export default function ImageCard({ member, checked}) {
           <CardMedia
             className={classes.media}
             image={member.imageUrl}
-            //{process.env.PUBLIC_URL + '/assets/germanyLandscape.jpg'}
           />
         </Grid>
         <Grid item xs={12}>
@@ -103,7 +104,7 @@ export default function ImageCard({ member, checked}) {
             <Typography 
               gutterBottom variant="h5" 
               component="h1" 
-              className={classes.title}
+              className={classes.name}
             >
               {member.name}
             </Typography>

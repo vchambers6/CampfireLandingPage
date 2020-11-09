@@ -4,7 +4,6 @@ import { MovieFilter } from '@material-ui/icons';
 import { CssBaseline, Grid } from '@material-ui/core';
 import useWindowPosition from '../hook/useWindowPosition';
 import teamMembers from "../static/teamMembers";
-import TeamMemberCard from './TeamMemberCard';
 import TeamMemberCardExpanded from './TeamMemberCardExpanded';
 import TagArray from './TagArray';
 import teamMemberTags from "../static/teamMemberTags";
@@ -23,12 +22,12 @@ const useStyles = makeStyles((theme) => ({
         margin: '3rem',
         textAlign: 'center',
     },
-
     title: {
         fontFamily: 'Poppins',
-        fontSize: '6rem',
-        margine: '-1rem',
-        color: 'white',
+        fontSize: '3rem',
+        weight: '400',
+        color: 'rgb(255, 143, 143,1)',
+        textAlign: 'center',
     },
     card: {
         height: '100%',
