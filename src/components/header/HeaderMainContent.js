@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import { createMuiTheme, makeStyles, withStyles } from '@material-ui/core/styles';
-import { AppBar, Collapse, IconButton, Typography, Toolbar, Button, Grid, Divider, Box } from '@material-ui/core';
+import { AppBar, Collapse, IconButton, Typography, Toolbar, Button, Grid, Divider, Box, rgbToHex } from '@material-ui/core';
 import schools from '../../static/schoolsOnboard.json' ;
 import { green, purple, pink} from '@material-ui/core/colors';
 import { Link as Scroll} from 'react-scroll'
@@ -21,15 +21,19 @@ const ColorButton = withStyles((theme) => ({
         color: '#fff', 
       },
       display: 'flex',
-      marginTop: '10px',
+      marginTop: '8px',
     },
   }))(Button);
 
   const CustomExpandMore = withStyles((theme) => ({
     root: {
-        color: 'rgba(255, 112, 112, 0.5)',
+        paddingLeft: '5px',
+        paddingRight: '5px',
+        borderRadius: '5px',
+        color: 'rgba(0, 0, 0, .5)',
+        backgroundColor: 'rgba(255, 112, 112, 0.5)',
         '&:hover': {
-            color: 'rgb(255, 143, 143)', 
+            color: 'rgb(0, 0, 0, 1)', 
           },
         fontSize: '3vw',
         
@@ -57,7 +61,8 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 'auto',
     }, 
     connect: {
-        maxWidth: '450px',
+        marginTop: '3rem',
+        maxWidth: '425px',
         width: '100%',
     },
     text: {
@@ -65,30 +70,23 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         fontFamily: 'Poppins',
-        fontSize: 'calc(3rem + 4vw)',
+        fontSize: 'calc(4rem + 1vw)',
         color: 'rgb(255, 143, 143,1)',
-      //  textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
+        textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
         lineHeight: .9,
+        margin: '10px',
     },
-
     subtitle: {
         fontFamily: 'Poppins',
-        fontSize: '2.5rem',
+        fontSize: '2.2rem',
+        color: 'rgb(48, 46, 65)',
         lineHeight: 1,
+        marginLeft: '10px',
     },
-    boxes: {
-        fontWeight: '500',  
-    },
-    joinNowBox: {
-        background: 'rgba(255, 153, 153, 0.5)',
-        borderRadius: '6px',
-        height: '100%',
-        
-    },
-
+   
     learnMoreBox: {
-        background: 'rgba(196, 196, 196, 0.5)',
-        borderRadius: '6px',
+        backgroundColor: 'rgb(255, 143, 143, 0.5)',
+        borderRadius: '5px',
         height: '100%',
 
     },
@@ -99,8 +97,9 @@ const useStyles = makeStyles((theme) => ({
         padding: '3px', 
         textAlign: 'center', 
         fontFamily: 'Poppins', 
-        fontSize: '1.8vw', 
-        color: 'rgba(0,0,0,0.7)'
+        fontWeight: '500',
+        fontSize: '1rem', 
+        color: 'rgba(0,0,0,1)',
     }
 
 })) 
@@ -129,12 +128,10 @@ export default function HeaderMainContent() {
                     justify='flex-start'
                     alignItems="center"
                 >
-                    {/*<Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapsedHeight={50}> */}
                     <Grid item xs={12} >
                         <div className={classes.text}> 
-                        <h1 className={classes.title}>campfire <br/> <div style={{color: 'black'}}>convos</div> </h1>
-                        <br/>
-                        <p className={classes.subtitle}> an online platform reimagining <br/> <b style={{color: 'rgb(255, 143, 143, 0.8)'}}> campus communities. </b></p> 
+                        <h1 className={classes.title}>campfire <br/> <div style={{color: 'rgb(48, 46, 65)', padding: '0px'}}>convos</div> </h1><br/>
+                        <p className={classes.subtitle}> an online platform reimagining <br/> <b style={{color: 'rgb(255, 143, 143, 0.8)', padding: '0px'}}> campus communities. </b></p> 
                         </div>
                     </Grid>
                             
@@ -144,11 +141,11 @@ export default function HeaderMainContent() {
                         spacing={4} 
                         xs={12}
                     >
-                        <Grid item xs={12} md={6} className={classes.boxes}>
-                            <Box display='flex' className={classes.joinNowBox}> 
+                        <Grid item xs={8} md={6} className={classes.boxes}>
+                            <Box display='flex' className={classes.learnMoreBox}> 
                                 <Grid container direction='column' justify='center' alignItems="center" className={classes.boxesText}>
                                     <Grid item xs={12}>
-                                        <Box> find your community. <br/>join today! </Box>
+                                        <Box>Sign up within minutes with your college email.</Box>
                                     </Grid>
                                         
                                     <Grid item xs={12}>
@@ -157,7 +154,7 @@ export default function HeaderMainContent() {
                                             e.preventDefault();
                                             window.location.href="https://campfireconvos.com/registration";}}
                                         > 
-                                            <b style={{fontSize: '1.7vw'}}> register now  </b>
+                                            <b style={{fontSize: '1rem', color: 'rgb(0, 0, 0, 0.5)'}}> register now  </b>
                                         </ColorButton> 
                                     </Grid>
                                        
@@ -165,13 +162,13 @@ export default function HeaderMainContent() {
                             </Box>
                         </Grid>
                             
-                        <Grid item xs={12} md={4} className={classes.boxes}>
+                        <Grid item xs={8} md={6} className={classes.boxes}>
                             <Box display='flex' className={classes.learnMoreBox}> 
                                 <Grid container direction='row' justify='center' alignItems="center" className={classes.boxesText}>
-                                    <Grid item xs={12}>
-                                        <Box> learn more about us.</Box>
+                                    <Grid item xs={8}>
+                                        <Box> Learn more about Campfire.</Box>
                                     </Grid>
-                                    <Grid item xs={12}> <Scroll to="about" smooth={true}> <CustomExpandMore /> </Scroll> </Grid>
+                                    <Grid item xs={12} style={{paddingTop: '5px'}}> <Scroll to="about" smooth={true}> <CustomExpandMore /> </Scroll> </Grid>
                                 </Grid>
                             </Box>
                         </Grid> {/* END OF BUTTONS BELOW MAIN TEXT */}
