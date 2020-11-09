@@ -8,8 +8,7 @@ import {
   Annotation
 } from "react-simple-maps";
 import { makeStyles, withStyles } from '@material-ui/core/styles'; 
-import {Container } from '@material-ui/core'
-
+import {Container, Box} from '@material-ui/core'
 import allStates from "./allstates.json";
 import schools from "../../static/schoolsOnboard.json";
 
@@ -79,6 +78,11 @@ const MapChart = () => {
                         stroke="#000"
                         geography={geo}
                         fill="transparent"
+                        style={{
+                            default: { outline: "none" },
+                            hover: { outline: "none" },
+                            pressed: { outline: "none" },
+                          }}
                         
                     />
                     ))}
@@ -99,7 +103,11 @@ const MapChart = () => {
             {/* coordinate system is [lon, lat] (order of d3-geo */}
             {schools.map(school => (
                 <Marker coordinates={[school["lon"], school["lat"]]}>
-                    <circle className={classes.marker} r={8} fill="#fc6060" />
+                    <circle className={classes.marker} r={8} fill="#ff9999"> 
+                    <img src={`${process.env.PUBLIC_URL + '/assets/flamelogoPink.png'}`} width='35' height='35'></img>
+                    
+                    </circle>
+                    
                 </Marker>
             ))}
             

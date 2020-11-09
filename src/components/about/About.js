@@ -3,7 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { MovieFilter } from '@material-ui/icons';
 import { CssBaseline, Grid, Box, Typography } from '@material-ui/core';
 import AboutTags from './AboutTags';
-import Map from './MapTest3'
+import Map from './MapTest3';
+import schools from "../../static/schoolsOnboard.json";
+
+var schoolsOnBoard = Object.keys(schools).length
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '100%',
         width: '100%',
         height: '100%',
-        backgroundColor: 'pink',
+        backgroundColor: '#ff9999',
         borderRadius: '10px', 
         padding: '20px',
         marginLeft: 'auto',
@@ -41,14 +44,15 @@ const useStyles = makeStyles((theme) => ({
     mapText: {
         color: 'black',
         fontSize: '2rem', 
+        
         //paddingLeft: '20px',
         //paddingTop: '30px',
         //paddingBottom: '30px',
     }, 
 
     mapContainer: {
-        //padding: '3px',
-        //margin: '5px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     }
 }))
 
@@ -129,7 +133,7 @@ export default function() {
                     <AboutTags />              
                 </Grid>
 
-                <Grid item container className={classes.mapContainer} xs={12}> 
+                <Grid item container className={classes.mapContainer} alignItems='center' xs={12}> 
 
                     {/*<Grid item xs={12} className={classes.mapText}>
                         <span > <b> Enriching campus communities. </b> </span>
@@ -137,7 +141,12 @@ export default function() {
 
                     </Grid>
                     */}
-                    <Grid item xs={12}>
+                    <Grid item xs={12} md={4}>
+                        <h1 className={classes.mapText}>
+                            join in on the conversations at our {schoolsOnBoard} partnering universities!
+                        </h1>
+                    </Grid>
+                    <Grid item xs={12} md={8}>
                         {/*<img src={`${process.env.PUBLIC_URL + '/assets/map.png'}`}  className={classes.connect}></img> */}
                         <Map />
                     </Grid>

@@ -6,7 +6,8 @@ import Header from './components/header/Header';
 import About from './components/about/About';
 
 import OurTeam from './components/OurTeam';
-import Contact from './components/Contact';
+import Contact from './components/Contact2';
+import Footer from './components/Footer';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,7 +37,7 @@ export default function App() {
       <Header />
       <About />
       <OurTeam />
-      <Contact />
+      <Footer />
     </div>
   );
 }

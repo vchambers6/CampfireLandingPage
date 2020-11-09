@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Poppins',
         fontSize: '6rem',
         margine: '-1rem',
-        color: 'white',
+        color: '#ff9999',
     },
     card: {
         height: '100%',

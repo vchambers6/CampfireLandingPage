@@ -69,6 +69,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'rgb(255, 143, 143,1)',
       //  textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
         lineHeight: .9,
+        marginBottom: '-30px',
     },
 
     subtitle: {
