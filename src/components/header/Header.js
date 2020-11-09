@@ -86,7 +86,7 @@ export default function Header() {
                     <Scroll to="header" smooth={true} className={classes.appbarLogo}>
                         <h1>
                             <Button>
-                                <img src={`${process.env.PUBLIC_URL + '/assets/flamelogo.png'}`} width='35' height='35'></img>
+                                <img src={`${process.env.PUBLIC_URL + '/assets/firelogo_purple.png'}`} width='35' height='35'></img>
                             </Button>
                         </h1>
                     </Scroll>

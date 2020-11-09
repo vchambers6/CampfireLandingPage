@@ -6,3 +6,11 @@
 3. change cards to expand on small browser -- created expandable card, not implemented to accomodate screen size
 4. center cards -- DONE 
 5. change divider color -- DONE 
+6. update profile cards
+    - add outline to photos
+    - instead of expanding, have text appear as an overlay over the card -- due to layout/size concerns
+7. change logo text, headers, text in boxes on first page to constant size
+8. reduce padding/spacing between title and subtitle in headerMainContent (& reduce size of text slightly?)
+9. potentially change the background color of about section? ~ added breakline
+10. when window is minimized, header main content info boxes should minimize into just 'learn more' and 'register' buttons.
+11. make register now button go fully black on hover
