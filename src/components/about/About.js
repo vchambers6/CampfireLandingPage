@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
 
     screenshot: {
         // transform: 'rotate(-30deg)',
-        width: '80%',
+        width: 'calc(30rem + 10vw)',
         height: 'auto',
         padding: '5px',
         alignContent: 'center',
@@ -112,12 +112,10 @@ export default function() {
                 <Grid item xs={10} lg={8}>
              
                 <h1 className={classes.title}>about</h1>
-                <p style={{padding: '1.5rem', marginLeft: '2rem', marginRight: '2rem', backgroundColor: 'rgb(255, 143, 143, 0.5)', borderRadius: '5px'}} 
+                <p style={{padding: '1.5rem', marginLeft: '2rem', marginRight: '2rem', marginBottom: '0px', backgroundColor: 'rgb(255, 143, 143, 0.5)', borderRadius: '5px'}} 
                     className={classes.subtext}>
                     Brief block of text about our mission and how we center intersectionality on our platform
-                    with the goal of connecting college students and strengthening community. As a design rule, 
-                    all small text should be this size and capitalized/punctuated normally. Medium and large headers
-                    should similarly remain consistent with sizing.
+                    with the goal of connecting college students and strengthening community.
                 </p>
 
                 </Grid>
@@ -172,12 +170,12 @@ export default function() {
                 <Grid item xs={12}>
                     <Box>
                         <Typography>
-                            <img src={`${process.env.PUBLIC_URL + '/assets/screenshot.png'}`} className={classes.screenshot}></img>
+                            <img src={`${process.env.PUBLIC_URL + '/assets/screenshot.png'}`} className={classes.screenshot} ></img>
                         </Typography>
                     </Box>
                 </Grid>
                 <Typography className={classes.subtitle}>
-                    Walkthrough..
+                    Walkthrough
                 </Typography>
 
                 {/* Graphics */}
