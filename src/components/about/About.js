@@ -125,28 +125,28 @@ export default function() {
 
                 <Grid container item xs={12} justify='center' alignItems='center' spacing={2} style={{padding:'10px'}}>
                     <Grid item xs={5}>
-                        <Box className={classes.box}>
+                        <Box className={classes.box} style={{marginRight: '5px'}}>
                             <img src={`${process.env.PUBLIC_URL + '/assets/illuminate2.png'}`} height='200px' weight='200px'></img>
                         </Box>
                     </Grid>
 
                     <Grid item xs={5}>
-                        <Box className={classes.box}>
+                        <Box className={classes.box} style={{maxWidth: '25rem', marginLeft: '5px'}}>
                             <p className={classes.subtitle}>Illuminate hidden similarities.</p>
                             <p className={classes.subtext}>From niche interests and identities to college coursework, engage with peers who share overlapping similarities. </p>
                         </Box>
                     </Grid>
                 </Grid>
 
-                <Grid container item xs={12} justify='center' alignItems='center' spacing={2} style={{padding:'10px'}}>
+                <Grid container item xs={12} justify='center' alignItems='center' spacing={0} style={{padding:'10px' }}>
                     <Grid item xs={5}>
-                        <Box className={classes.box}>
+                        <Box className={classes.box} style={{maxWidth: '25rem', marginRight: '5px'}}>
                             <p className={classes.subtitle}>Develop community.</p>
                             <p className={classes.subtext}>Explore communities and shape new ones as you connect and chat with peers.</p>
                         </Box>
                     </Grid>
                     <Grid item xs={5}>
-                        <Box className={classes.box}>
+                        <Box className={classes.box} style={{marginLeft: '5px'}}>
                             <img src={`${process.env.PUBLIC_URL + '/assets/mobile_user.png'}`} height='200px' weight='200px'></img>
                         </Box>
                     </Grid>
