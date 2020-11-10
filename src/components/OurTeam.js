@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
     titleWrapper: {
         margin: '3rem',
+        marginBottom: '0rem',
         textAlign: 'center',
     },
     title: {
@@ -30,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
     },
     card: {
+        marginTop: '0',
         height: '100%',
     }
 }))
