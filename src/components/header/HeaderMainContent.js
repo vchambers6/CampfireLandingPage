@@ -86,6 +86,8 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: .9,
         marginTop: '5px',
         marginBottom: '0px',
+        margin: '10px',
+
     },
     subtitle: {
         fontFamily: 'Poppins',

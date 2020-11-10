@@ -25,10 +25,16 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         fontFamily: 'Poppins',
+<<<<<<< HEAD
+        fontSize: '6rem',
+        margine: '-1rem',
+        color: '#ff9999',
+=======
         fontSize: '3rem',
         weight: '400',
         color: 'rgb(255, 143, 143,1)',
         textAlign: 'center',
+>>>>>>> 73814680e3b9d7dcdc794a52d253a4b09c7f0faf
     },
     card: {
         marginTop: '0',

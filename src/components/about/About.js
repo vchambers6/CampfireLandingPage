@@ -3,7 +3,10 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { MovieFilter } from '@material-ui/icons';
 import { CssBaseline, Grid, Box, Typography, Button } from '@material-ui/core';
 import AboutTags from './AboutTags';
-import Map from './MapTest3'
+import Map from './MapTest3';
+import schools from "../../static/schoolsOnboard.json";
+
+var schoolsOnBoard = Object.keys(schools).length
 
 const ColorButton = withStyles((theme) => ({
     root: {
@@ -65,9 +68,15 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '100%',
         width: '100%',
         height: '100%',
+<<<<<<< HEAD
+        backgroundColor: '#ff9999',
+        borderRadius: '10px', 
+        padding: '20px',
+=======
         // backgroundColor: '#E5E5E5',
         // borderRadius: '10px', 
         // padding: '20px',
+>>>>>>> 73814680e3b9d7dcdc794a52d253a4b09c7f0faf
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: '0',
@@ -84,15 +93,23 @@ const useStyles = makeStyles((theme) => ({
 
     mapText: {
         color: 'black',
+<<<<<<< HEAD
+        fontSize: '2rem', 
+        
+        //paddingLeft: '20px',
+        //paddingTop: '30px',
+        //paddingBottom: '30px',
+=======
         fontSize: '3vw', 
         paddingLeft: '20px',
         paddingTop: '30px',
         paddingBottom: '30px',
+>>>>>>> 73814680e3b9d7dcdc794a52d253a4b09c7f0faf
     }, 
 
     mapContainer: {
-        //padding: '3px',
-        //margin: '5px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     }
 }))
 
@@ -213,7 +230,7 @@ export default function() {
                     <AboutTags />              
                 </Grid>
 
-                <Grid item container className={classes.mapContainer} xs={12}> 
+                <Grid item container className={classes.mapContainer} alignItems='center' xs={12}> 
 
                     {/*<Grid item xs={12} className={classes.mapText}>
                         <span > <b> Enriching campus communities. </b> </span>
@@ -221,7 +238,16 @@ export default function() {
 
                     </Grid>
                     */}
+<<<<<<< HEAD
+                    <Grid item xs={12} md={4}>
+                        <h1 className={classes.mapText}>
+                            join in on the conversations at our {schoolsOnBoard} partnering universities!
+                        </h1>
+                    </Grid>
+                    <Grid item xs={12} md={8}>
+=======
                     <Grid item xs={10} md={6}>
+>>>>>>> 73814680e3b9d7dcdc794a52d253a4b09c7f0faf
                         {/*<img src={`${process.env.PUBLIC_URL + '/assets/map.png'}`}  className={classes.connect}></img> */}
                         <Map />
                     </Grid>
