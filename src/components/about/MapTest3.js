@@ -44,13 +44,14 @@ const useStyles = makeStyles((theme) => ({
     map: {
         //justifyContent: 'center', 
         //alignItems: 'center', 
-        backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/mapBackground.png"})`,
-        backgroundColor: 'rgba(255,255,255,0.6)', 
+        backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/MapBG.png"})`,
+        backgroundColor: 'rgba(255,255,255,0.3)', 
         backgroundBlendMode: 'lighten', // changes opacity of background image. 
         backgroundRepeat: 'no-repeat',
         //backgroundSize: '840px',
         backgroundPosition: 'center',
-        backgroundSize: '90%',
+        backgroundSize: '100%',
+        backgroundPosition: '20% 40%',
     },
     marker: {
         '&:hover': {
@@ -70,7 +71,8 @@ const MapChart = () => {
                 width='1000'
                 style={{strokeWidth: 2,}}
             > 
-            <Geographies geography={geoUrl}>
+            <Geographies geography={geoUrl}
+            >
                 {({ geographies }) => (
                 <>
                     {geographies.map(geo => (
@@ -79,6 +81,11 @@ const MapChart = () => {
                         stroke="#000"
                         geography={geo}
                         fill="transparent"
+                        style={{
+                            default: { outline: "none" },
+                            hover: { outline: "none" },
+                            pressed: { outline: "none" },
+                          }}
                         
                     />
                     ))}
