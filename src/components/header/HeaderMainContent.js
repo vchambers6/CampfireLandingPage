@@ -13,12 +13,13 @@ const campusCount = Object.keys(schools).length
 // register now button 
 const ColorButton = withStyles((theme) => ({
     root: {
-      color: theme.palette.getContrastText('#ff7070'),
+      //color: theme.palette.getContrastText('#ff7070'),
+      color: 'rgb(0, 0, 0, 0.5)',
       backgroundColor: 'rgba(255, 112, 112, 0.5)',
       textTransform: 'none', 
       '&:hover': {
         backgroundColor: 'rgb(255, 143, 143)',
-        color: '#fff', 
+        color: 'black', 
       },
       display: 'flex',
       marginTop: '8px',
@@ -35,7 +36,7 @@ const ColorButton = withStyles((theme) => ({
         '&:hover': {
             color: 'rgb(0, 0, 0, 1)', 
           },
-        fontSize: '3vw',
+        fontSize: '2rem',
         
     },
   }))(ExpandMoreIcon);
@@ -60,6 +61,13 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: 'auto',
         marginRight: 'auto',
     }, 
+    bigGrid: {
+        [theme.breakpoints.down('sm')]: {
+            textAlign: 'center',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          },
+    },
     connect: {
         marginTop: '3rem',
         maxWidth: '425px',
@@ -67,6 +75,8 @@ const useStyles = makeStyles((theme) => ({
     },
     text: {
         lineHeight: .0001,
+        
+
     },
     title: {
         fontFamily: 'Poppins',
@@ -74,14 +84,17 @@ const useStyles = makeStyles((theme) => ({
         color: 'rgb(255, 143, 143,1)',
         textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
         lineHeight: .9,
-        margin: '10px',
+        marginTop: '5px',
+        marginBottom: '0px',
     },
     subtitle: {
         fontFamily: 'Poppins',
-        fontSize: '2.2rem',
+        fontSize: '2rem',
         color: 'rgb(48, 46, 65)',
         lineHeight: 1,
         marginLeft: '10px',
+        marginTop: '5px',
+        marginBottom: '5px',
     },
    
     learnMoreBox: {
@@ -114,8 +127,10 @@ export default function HeaderMainContent() {
                 spacing={2}
                 justify="center"
                 alignItems="center"
+                className={classes.bigGrid}
+                style={{marginBottom:'0px'}}
             >
-                 <Grid item xs={12} md={4}>
+                <Grid item xs={5} md={4} >
                     <div>
                         <img src={`${process.env.PUBLIC_URL + '/assets/connect.png'}`}  className={classes.connect}></img>
                     </div>             
@@ -126,11 +141,11 @@ export default function HeaderMainContent() {
                     
                     spacing={1}
                     justify='flex-start'
-                    alignItems="center"
+                    alignItems='center'
                 >
-                    <Grid item xs={12} >
+                    <Grid item xs={12}>
                         <div className={classes.text}> 
-                        <h1 className={classes.title}>campfire <br/> <div style={{color: 'rgb(48, 46, 65)', padding: '0px'}}>convos</div> </h1><br/>
+                        <h1 className={classes.title}>campfire<br/> <div style={{color: 'rgb(48, 46, 65)', padding: '0px'}}>convos</div> </h1><br/>
                         <p className={classes.subtitle}> an online platform reimagining <br/> <b style={{color: 'rgb(255, 143, 143, 0.8)', padding: '0px'}}> campus communities. </b></p> 
                         </div>
                     </Grid>
@@ -141,10 +156,10 @@ export default function HeaderMainContent() {
                         spacing={4} 
                         xs={12}
                     >
-                        <Grid item xs={8} md={6} className={classes.boxes}>
+                        <Grid item xs={6} className={classes.boxes}>
                             <Box display='flex' className={classes.learnMoreBox}> 
                                 <Grid container direction='column' justify='center' alignItems="center" className={classes.boxesText}>
-                                    <Grid item xs={12}>
+                                    <Grid item xs={9}>
                                         <Box>Sign up within minutes with your college email.</Box>
                                     </Grid>
                                         
@@ -153,8 +168,9 @@ export default function HeaderMainContent() {
                                             onClick={(e) => {
                                             e.preventDefault();
                                             window.location.href="https://campfireconvos.com/registration";}}
+                                            style={{padding: '1rem', marginLeft: 'auto', marginRight: 'auto'}}
                                         > 
-                                            <b style={{fontSize: '1rem', color: 'rgb(0, 0, 0, 0.5)'}}> register now  </b>
+                                            <b style={{fontSize: '1rem', padding: '0px'}}> register now  </b>
                                         </ColorButton> 
                                     </Grid>
                                        
@@ -162,7 +178,7 @@ export default function HeaderMainContent() {
                             </Box>
                         </Grid>
                             
-                        <Grid item xs={8} md={6} className={classes.boxes}>
+                        <Grid item xs={6} className={classes.boxes}>
                             <Box display='flex' className={classes.learnMoreBox}> 
                                 <Grid container direction='row' justify='center' alignItems="center" className={classes.boxesText}>
                                     <Grid item xs={8}>

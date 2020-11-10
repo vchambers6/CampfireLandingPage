@@ -18,14 +18,14 @@ const useStyles = makeStyles({
     width: 'auto',
   },
   icon: {
-    color: '#fff', 
+    color: 'rgb(48, 46, 65)', 
     margin: '0 auto',
     fontSize:'2rem',
     flexGrow: 5,
     shadow: '2px 2px',
   },
   toolBarButtons: {
-    color: '#ffffff',
+    color: 'rgb(48, 46, 65)',
     fontSize: '1rem',
     },
 });
@@ -47,7 +47,7 @@ export default function Drawer() {
     setState({ ...state, [anchor]: open });
   };
 
-  var toolBarItems = [["about", "about"], ["learnMore", "learn more"], ["ourTeam", "our team"], ];
+  var toolBarItems = [["about", "about"], ["ourTeam", "our team"], ];
   const names = ['register', 'login'];
   const list = (anchor) => (
     <div

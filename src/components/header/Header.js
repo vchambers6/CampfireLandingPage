@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
     dividerColor: {
-        background: 'white'
+        background: 'rgb(48, 46, 65)',
     },
     goDown: {
         color: '#ff9f87', 
@@ -95,7 +95,7 @@ export default function Header() {
                             {toolBarItems.map(toolBarItem => {
                             return ( 
                                 <Scroll to={toolBarItem[0]} smooth={true}>
-                                    <Button className={classes.toolBarButtons} style={{textTransform: 'none', fontFamily: 'Poppins'}}>
+                                    <Button className={classes.toolBarButtons} style={{textTransform: 'none', fontFamily: 'Poppins', color: 'rgb(48, 46, 65)'}}>
                                         {toolBarItem[1]}
                                     </Button>
                                 </Scroll>
@@ -110,7 +110,7 @@ export default function Header() {
                                     return (
                                         <Button 
                                             className={classes.toolBarButtons} 
-                                            style={{textTransform: 'none', fontFamily: 'Poppins'}}
+                                            style={{textTransform: 'none', fontFamily: 'Poppins', color: 'rgb(48, 46, 65)'}}
                                             onClick={(e) => {
                                                 e.preventDefault();
                                                 name === 'register' ? window.location.href="https://campfireconvos.com/registration" : 
