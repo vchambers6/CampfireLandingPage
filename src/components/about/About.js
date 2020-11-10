@@ -215,7 +215,7 @@ export default function() {
                     <AboutTags />              
                 </Grid>
 
-                <Grid item container className={classes.mapContainer} alignItems='center' xs={12}> 
+                <Grid item container className={classes.mapContainer} alignItems='center' spacing={4} xs={12}> 
 
                     {/*<Grid item xs={12} className={classes.mapText}>
                         <span > <b> Enriching campus communities. </b> </span>
@@ -223,14 +223,13 @@ export default function() {
 
                     </Grid>
                     */}
-                    <Grid item xs={10} md={6}>
+                    <Grid item xs={10} md={8}>
                         {/*<img src={`${process.env.PUBLIC_URL + '/assets/map.png'}`}  className={classes.connect}></img> */}
                         <Map />
                     </Grid>
-                    <Grid item xs={4}
+                    <Grid item xs={6} md={3}
                            style={{backgroundColor: 'rgb(255, 143, 143, 0.5)',
                                 textAlign:'left',
-                                margin: '10px',
                                 padding: '1rem',
                                 borderRadius: '5px',
                                 }}>

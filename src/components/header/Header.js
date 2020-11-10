@@ -22,11 +22,13 @@ const useStyles = makeStyles((theme) => ({
         position: 'fixed',
         //height: 50,
         display: 'flex',
-        borderBottom: '5em soild white',
+        borderBottom: '5em soild white', 
     },
     appbarWrapper: {
         width: '90%',
-        margin: '0 auto',    
+        margin: '0 auto', 
+        height: '30px'
+         
     },
     appbarLogo: {
         flexGrow: 5,

@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import SortIcon from '@material-ui/icons/Sort';
 import { Link as Scroll} from 'react-scroll'
@@ -28,6 +29,9 @@ const useStyles = makeStyles({
     color: 'rgb(48, 46, 65)',
     fontSize: '1rem',
     },
+  dividerColor: {
+    background: 'rgb(48, 46, 65)',
+  },
 });
 
 export default function Drawer() {
@@ -69,6 +73,8 @@ export default function Drawer() {
                 </Scroll>
             </ListItem>
         ))}
+        
+        <Divider classes={{root: classes.dividerColor}} />
 
         {names.map (name => {
             return (

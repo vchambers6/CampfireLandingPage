@@ -44,13 +44,13 @@ const useStyles = makeStyles((theme) => ({
         //justifyContent: 'center', 
         //alignItems: 'center', 
         backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/MapBG.png"})`,
-        backgroundColor: 'rgba(255,255,255,0.3)', 
+        backgroundColor: 'rgba(255,255,255,0.5)', 
         backgroundBlendMode: 'lighten', // changes opacity of background image. 
         backgroundRepeat: 'no-repeat',
         //backgroundSize: '840px',
         backgroundPosition: 'center',
         backgroundSize: '100%',
-        backgroundPosition: '20% 40%',
+        backgroundPosition: 'left 40% bottom 57%',
     },
     marker: {
         '&:hover': {
@@ -68,7 +68,7 @@ const MapChart = () => {
         <div className={classes.map}>
             <ComposableMap projection="geoAlbersUsa"
                 width='1000'
-                style={{strokeWidth: 2,}}
+                style={{strokeWidth: 1,}}
             > 
             <Geographies geography={geoUrl}
             >
