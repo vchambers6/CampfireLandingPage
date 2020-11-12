@@ -11,6 +11,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import {Container, Box} from '@material-ui/core'
 import allStates from "./allstates.json";
 import schools from "../../static/schoolsOnboard.json";
+import ActionMarker from "./ActionMarker";
 
 const InteractiveMarker = withStyles((theme) => ({
     style: {
@@ -22,6 +23,7 @@ const InteractiveMarker = withStyles((theme) => ({
       },
 
 }))(Marker); 
+
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
@@ -58,11 +60,8 @@ const useStyles = makeStyles((theme) => ({
           },
     },
 }))
-
 const MapChart = () => {
     const classes = useStyles(); 
-
-
   return (
       <div className={classes.root}>
         <div className={classes.map}>
@@ -104,11 +103,24 @@ const MapChart = () => {
 
             {/* coordinate system is [lon, lat] (order of d3-geo */}
             {schools.map(school => (
-                <Marker coordinates={[school["lon"], school["lat"]]}>
-                    <circle className={classes.marker} r={8} fill="#ff9999"> 
+                <Marker coordinates={[school["lon"], school["lat"]]} width="50" height="40">
+                    {/*<circle className={classes.marker} r={8} fill="#ff9999"> 
                     <img src={`${process.env.PUBLIC_URL + '/assets/flamelogoPink.png'}`} width='35' height='35'></img>
                     
-                    </circle>
+            </circle> 
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style={{stopColor:'rgb(255,255,0)', stopOpacity: 1}} />
+                            <stop offset="100%" style={{stopColor:'rgb(255,0,0)', stopOpacity: 1}} />
+                        </linearGradient>
+                    </defs>
+                  
+                        <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+                   
+                    
+                    <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>*/}
+                    <ActionMarker school={school.name}/>
+                    
                     
                 </Marker>
             ))}

@@ -31,6 +31,10 @@ const useStyles = makeStyles({
     },
   dividerColor: {
     background: 'rgb(48, 46, 65)',
+    marginLeft: '20px',
+    marginRight: '20px',
+    marginTop: '10px',
+    marginBottom: '10px',
   },
 });
 

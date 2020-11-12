@@ -17,16 +17,17 @@ import IconButton from '@material-ui/core/IconButton';
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 350,
-    background: 'linear-gradient(45deg, rgb(64, 60, 86, 0.6) 9%, #FF8F8F 90%)', 
-    // prev gradient color #FF8E53 
+    background: 'linear-gradient(45deg, rgba(48, 46, 65, 0.2) 10%, rgba(255, 143, 143, 0.4) 50%)', 
+    // prev gradient 1 color: rgba(64, 60, 86, 0.4)
+    // prev gradient color #FF8E53  
     //margin: '10px', 
     borderRadius: 15,
-    boxShadow: '0 4px 7px 3px rgba(255, 142, 164, 0.3)',
+    //boxShadow: '0 4px 7px 3px rgba(255, 142, 164, 0.3)',
     justifyContent: "center",
     alignItems: "center",
     fontFamily: 'Poppins', 
     textAlign: "center",
-    color: "#fff", 
+    color: 'rgb(48, 46, 65)', 
     marginLeft: 'auto',
     marginRight: 'auto',
   },
@@ -38,8 +39,10 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     display: 'flex',
       marginLeft: 'auto',
+      border: '5px solid ',
+      borderRadius: '50%',
       marginRight: 'auto',
-    borderWidth: 1,
+    //color: '#fff',
     marginBottom: '0px',
   },
   name: {
@@ -52,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     transform: 'rotate(0deg)',
     marginLeft: 'auto',
     marginRight: 'auto',
-    color: '#fff',
+    color: '#000',
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
@@ -67,7 +70,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Poppins',
     fontSize: '1rem',
     textAlign: "center",
-    color: "#fff",
+    color: "#000",
+    //color: 'rgb(48, 46, 65)',
     padding: '10px',
   },
   tagArray: {

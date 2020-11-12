@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100vw',
     },
     appbar: {
-        background: 'rgb(255, 143, 143, 1)',    
+        background: 'rgba(255, 143, 143, 1)',    
         position: 'fixed',
         //height: 50,
         display: 'flex',
@@ -61,6 +61,8 @@ const useStyles = makeStyles((theme) => ({
     },
     dividerColor: {
         background: 'rgb(48, 46, 65)',
+        marginLeft: '20px',
+        marginRight: '20px',
     },
     goDown: {
         color: '#ff9f87', 
@@ -68,7 +70,10 @@ const useStyles = makeStyles((theme) => ({
     },
     mainContent: {
         marginTop: '40px',
-    }
+    }, 
+    dividerRight: {
+
+    },
 })) 
 
 export default function Header() {
@@ -93,7 +98,8 @@ export default function Header() {
                         </h1>
                     </Scroll>
                     <Grid container justify='flex-end' className={classes.toolBarButtons}>
-                        
+
+                            <div className={classes.dividerRight}>
                             {toolBarItems.map(toolBarItem => {
                             return ( 
                                 <Scroll to={toolBarItem[0]} smooth={true}>
@@ -102,12 +108,12 @@ export default function Header() {
                                     </Button>
                                 </Scroll>
                             )})}  
-                            
+                            </div> 
                             <Divider classes={{root: classes.dividerColor}} orientation='vertical' flexItem/> 
                             
                             
                             
-                            <div>
+                            <div className={classes.dividerLeft}>
                                 {names.map (name => {
                                     return (
                                         <Button 
