@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
         zIndex: 1,
         bottom: 0,
         color: '#fff',
-        fontSize: '3vw',
+        fontSize: '1.5rem',
         textAlign: 'center',
         transform: 'scaleX(.67)',
     },
@@ -53,7 +53,7 @@ export default function Footer() {
                             href={`mailto:info@campfireconvos.com?subject=Campfire Convos Inquiry`}
                             target="_top"
                             rel="noopener noreferrer"
-                            style={{textTransform: 'none', color: '#fff', fontSize: '3vw', fontFamily: 'Poppins'}}
+                            style={{fontFamily: 'Poppins', textTransform: 'none', color: 'rgb(48, 46, 65)', fontSize: '1.5rem', fontFamily: 'Poppins'}}
                         >
                             info@campfireconvos.com
                         </Button>
