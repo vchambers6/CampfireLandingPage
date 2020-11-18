@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
     }, 
 
     mapContainer: {
-        marginLeft: 'auto',
+        marginLeft: '3rem',
         marginRight: 'auto',
     }
 }))
@@ -177,28 +177,28 @@ export default function() {
                     </Box>
                 </Grid>
                 <Typography className={classes.subtitle}>
-                    Walkthrough
+                    Get Started
                 </Typography>
 
                 {/* Graphics */}
                 <Grid container item xs={12} justify='center' alignItems='center' spacing={3} style={{padding:'10px'}}>
                     <Grid item xs={3}>
                         <Box className={classes.box}>
-                            <p>subtext: select intersections...</p>
+                            <p>1. Consider communities that encompass your own overlapping identities and interests.</p>
                             <img src={`${process.env.PUBLIC_URL + '/assets/venn_diagram.png'}`} height='100px' weight='100px'></img>
                         </Box>
                     </Grid>
 
                     <Grid item xs={3}>
                         <Box className={classes.box}>
-                            <p>select tagssss</p>
+                            <p>2. Select from our wide range of tags to form a new group or join an existing one.</p>
                             <img src={`${process.env.PUBLIC_URL + '/assets/tag_selection.png'}`} height='100px' weight='100px'></img>
                         </Box>
                     </Grid>
 
                     <Grid item xs={3}>
                         <Box className={classes.box}>
-                            <p>begin chatting</p>
+                            <p>3. Join in on the conversation!</p>
                             <img src={`${process.env.PUBLIC_URL + '/assets/chatting2.png'}`} height='100px' weight='100px'></img>
                         </Box>
                     </Grid>
