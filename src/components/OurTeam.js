@@ -7,6 +7,7 @@ import teamMembers from "../static/teamMembers";
 import TeamMemberCardExpanded from './TeamMemberCardExpanded';
 import TagArray from './TagArray';
 import teamMemberTags from "../static/teamMemberTags";
+import PageHeaderText from './PageHeaderText';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,11 +18,12 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: 'wrap',
         marginLeft: 'auto',
         marginRight: 'auto',
+        textAlign: 'center',
     },
     titleWrapper: {
         margin: '3rem',
         marginBottom: '0rem',
-        textAlign: 'center',
+        
     },
     title: {
         fontFamily: 'Poppins',
@@ -40,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
 export default function() {
     const classes = useStyles();  
     const checked = useWindowPosition('aboutTags');
+    const header ={text: 'our team'};
     return (
         
         <div className={classes.root} id="ourTeam">
@@ -51,8 +54,8 @@ export default function() {
                 alignContent="stretch"
             >
                 <Grid item xs={12}>
-                <div className={classes.titleWrapper}>
-                    <h1 className={classes.title}>our team</h1>
+                <div className>
+                    <PageHeaderText header={header}/>
                 </div>
                 </Grid>
 
