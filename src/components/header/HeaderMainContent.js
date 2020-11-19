@@ -148,7 +148,7 @@ export default function HeaderMainContent() {
                     <Grid item xs={12}>
                         <div className={classes.text}> 
                         <h1 className={classes.title}>campfire<br/> <div style={{color: 'rgb(48, 46, 65)', padding: '0px'}}>convos</div> </h1><br/>
-                        <p className={classes.subtitle}> an online platform reimagining <br/> <b style={{color: 'rgb(255, 143, 143, 0.8)', padding: '0px'}}> campus communities. </b></p> 
+                        <p className={classes.subtitle}> illuminating our <br/> <b style={{color: 'rgb(255, 143, 143, 0.8)', padding: '0px'}}> hidden similarities.</b></p> 
                         </div>
                     </Grid>
                             

@@ -5,6 +5,7 @@ import { CssBaseline, Grid, Box, Typography, Button } from '@material-ui/core';
 import AboutTags from './AboutTags';
 import Map from './MapTest3';
 import schools from "../../static/schoolsOnboard.json";
+import Carousel from "./Carousel";
 
 var schoolsOnBoard = Object.keys(schools).length
 
@@ -116,8 +117,10 @@ export default function() {
                 <h1 className={classes.title}>about</h1>
                 <p style={{padding: '1.5rem', marginLeft: '2rem', marginRight: '2rem', marginBottom: '0px', backgroundColor: 'rgb(255, 143, 143, 0.5)', borderRadius: '5px'}} 
                     className={classes.subtext}>
-                    Brief block of text about our mission and how we center intersectionality on our platform
-                    with the goal of connecting college students and strengthening community.
+                    No matter what your goal is, 
+                    Campfire will connect you with the precise and necessary support to make it happen. 
+                    Below are but a few examples.
+
                 </p>
 
                 </Grid>
@@ -163,19 +166,21 @@ export default function() {
                         height: 5,
                         width: '80%',
                         }}/></div>
-                        <Typography className={classes.subtitle} style={{marginTop: '2rem', marginLeft: '2rem', marginRight: '2rem'}}>
-                            Explore and engage with intersectional communities.
-                        </Typography>
+                    </Box>
+                </Grid>
+                
+                <Grid container item xs={12}>
+                <Grid item xs={2}/>
+                <Grid item xs={8}>
+                    <Box>
+                       <Carousel />
                     </Box>
                 </Grid>
 
-                <Grid item xs={12}>
-                    <Box>
-                        <Typography>
-                            <img src={`${process.env.PUBLIC_URL + '/assets/screenshot.png'}`} className={classes.screenshot} ></img>
-                        </Typography>
-                    </Box>
+                <Grid item xs={2}/>
                 </Grid>
+                
+
                 <Typography className={classes.subtitle}>
                     Get Started
                 </Typography>

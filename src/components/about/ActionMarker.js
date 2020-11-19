@@ -11,7 +11,7 @@ export default class App extends React.Component {
     school = this.props.school; 
     state = {
      open: false,
-     hovered: true
+     hover: false
      };
     toggleExpand = () => {
      this.setState({
@@ -25,15 +25,12 @@ export default class App extends React.Component {
         })
     }
     
-
-    
-
   
     render() {
         var markerStyle; 
         var markerStroke; 
         if (this.state.hover) {
-            markerStyle = {fill: 'rgb(255, 112, 112)', boxShadow: '0 0 25px #000'}
+            markerStyle = {fill: 'rgb(97, 94, 115)', boxShadow: '0 0 25px #000'}
             markerStroke=5
 
         } else {
