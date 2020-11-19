@@ -102,7 +102,7 @@ export default function Header() {
                             <div className={classes.dividerRight}>
                             {toolBarItems.map(toolBarItem => {
                             return ( 
-                                <Scroll to={toolBarItem[0]} smooth={true}>
+                                <Scroll to={toolBarItem[0]} smooth={true} offset={-50}>
                                     <Button className={classes.toolBarButtons} style={{textTransform: 'none', fontFamily: 'Poppins', color: 'rgb(48, 46, 65)'}}>
                                         {toolBarItem[1]}
                                     </Button>

@@ -70,7 +70,7 @@ export default function Drawer() {
       <List>
         {toolBarItems.map(toolBarItem => (
             <ListItem>
-                <Scroll to={toolBarItem[0]} smooth={true}>
+                <Scroll to={toolBarItem[0]} offset={-50} smooth={true}>
                     <Button className={classes.toolBarButtons} style={{textTransform: 'none', fontFamily: 'Poppins'}}>
                         {toolBarItem[1]}
                     </Button>
