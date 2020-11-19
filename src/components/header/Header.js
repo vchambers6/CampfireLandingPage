@@ -6,6 +6,9 @@ import Drawer from './Drawer';
 import HeadMainContent from './HeaderMainContent';
 import HeaderMainContent from './HeaderMainContent';
 import { NearMeSharp } from '@material-ui/icons';
+import Slide from '@material-ui/core/Slide';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -83,11 +86,14 @@ export default function Header() {
         setChecked(true)
     }, [])
 
+    const trigger = useScrollTrigger();
+
     var toolBarItems = [["about", "about"], ["ourTeam", "our team"], ]
     const names = ['register', 'login']
     
     return(
         <div className={classes.root} id='header'>
+            <Slide appear={false} direction="down" in={!trigger}>
             <AppBar className = {classes.appbar} elevation={0}>
                 <Toolbar className={classes.appbarWrapper}>
                     <Scroll to="header" smooth={true} className={classes.appbarLogo}>
@@ -137,6 +143,7 @@ export default function Header() {
                     </div>  
                 </Toolbar>  
             </AppBar>    
+            </Slide>
             <div className={classes.mainContent}>
                 <HeaderMainContent />    
             </div>
