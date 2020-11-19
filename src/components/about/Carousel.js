@@ -5,7 +5,6 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
-
 const slides = [
   {name: "Carousel_1", 
    header: "Find your communities.", 
