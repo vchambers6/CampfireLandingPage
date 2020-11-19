@@ -6,6 +6,8 @@ import AboutTags from './AboutTags';
 import Map from './MapTest3';
 import schools from "../../static/schoolsOnboard.json";
 import Carousel from "./Carousel";
+import PageHeaderText from "../PageHeaderText";
+
 
 var schoolsOnBoard = Object.keys(schools).length
 
@@ -36,15 +38,8 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         // padding: '10px',
     },
-    title: {
-        padding: '0px',
-        marginBottom: '0px',
-        fontFamily: 'Poppins',
-        fontSize: '3rem',
-        weight: '400',
-        color: 'rgb(255, 143, 143,1)',
-        textAlign: 'center',
-    },
+
+    
 
     subtitle: {
         fontFamily: 'Poppins',
@@ -101,6 +96,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function() {
     const classes = useStyles();  
+    const header = {text: "about"}
     return (
         <div className={classes.root} id="about">
 
@@ -112,9 +108,10 @@ export default function() {
             >   
                {/* do we need this header?? looks off. 
                potentially use background color shift or rename section? */}
-                <Grid item xs={10} lg={8}>
-             
-                <h1 className={classes.title}>about</h1>
+                <Grid item container xs={10} lg={8} justify='center'>
+                     <PageHeaderText header={header}/>
+                    
+
                 <p style={{padding: '1.5rem', marginLeft: '2rem', marginRight: '2rem', marginBottom: '0px', backgroundColor: 'rgb(255, 143, 143, 0.5)', borderRadius: '5px'}} 
                     className={classes.subtext}>
                     No matter what your goal is, 
