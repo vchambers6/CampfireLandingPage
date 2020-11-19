@@ -75,8 +75,6 @@ const useStyles = makeStyles((theme) => ({
     },
     text: {
         lineHeight: .0001,
-        
-
     },
     title: {
         fontFamily: 'Poppins',
