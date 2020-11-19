@@ -1,18 +1,21 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'; 
 import { Button, Typography } from '@material-ui/core';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import Divider from '@material-ui/core/Divider';
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        //background: 'linear-gradient(#fff 30%, #ff9999 90%)',
         fontFamily: 'Poppins',
         margin: 0,
         padding: 0,
+        color: 'rgb(48, 46, 65)',
+        marginBottom: '30px',
     },
     section: {
         position: 'static',
-        height: "40vh",
+        height: "10vh",
         height: '100%',
         width: "100%",
         content: '', 
@@ -23,39 +26,51 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         overflow: 'hidden',
 
-        background: '#ff9999',
-        opacity: '75%',
-        //background: 'rgba(196, 196, 196, 0.7)',
-        borderRadius: '50% 50% 0 0/100% 100% 0 0',
-        transform: 'scaleX(1.5)',
+        //background: '#615E73',
+        // opacity: '75%',
+        // background: 'rgba(97, 94, 115, 0.5)',
+        //borderRadius: '50% 50% 0 0/100% 100% 0 0',
+        //transform: 'scaleX(1.5)',
             
     },
     content: {
+        padding: '0px',
         position: 'static',
+        marginTop: '-10px',
+        marginBottom: "-10px",
         zIndex: 1,
         bottom: 0,
-        color: '#fff',
         fontSize: '1.5rem',
         textAlign: 'center',
-        transform: 'scaleX(.67)',
     },
+    mailIcon: {
+        fontSize: '2rem',
+
+    },
+
+    dividerColor: {
+        background: 'rgba(48, 46, 65, 0.5)',
+        marginTop: '10px',
+        marginBottom: '10px',
+      },
 }))
 
 export default function Footer() {
     const classes = useStyles();  
     return (
-
+        
         <div className={classes.root}>
+            <Divider classes={{root: classes.dividerColor}} />
             <section className={classes.section}>
                 <div className={classes.content}> 
-                    <h5> want to get in touch? <br/> reach us at 
+                    <h5> want to get in touch? <br/>
                         <Button
                             href={`mailto:info@campfireconvos.com?subject=Campfire Convos Inquiry`}
                             target="_top"
                             rel="noopener noreferrer"
                             style={{fontFamily: 'Poppins', textTransform: 'none', color: 'rgb(48, 46, 65)', fontSize: '1.5rem', fontFamily: 'Poppins'}}
                         >
-                            info@campfireconvos.com
+                            <MailOutlineIcon classes={{root: classes.mailIcon}}/>
                         </Button>
                     </h5>
                 </div>
