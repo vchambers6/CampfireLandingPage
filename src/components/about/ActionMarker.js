@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default class App extends React.Component {
     school = this.props.school; 
+    image = this.props.image;
     state = {
      open: false,
      hover: false
@@ -59,11 +60,13 @@ export default class App extends React.Component {
                 
                 {/*<path d="M-54,-66 L-50,-63 -46,-66" />
                 <polygon points="-50,-63 -54,-66 -46,-66" style={{fill: 'rgb(0,0,255)'}} />
-                */}
-
+                
+                
                 <rect width="150" height="50" x="-75" y="-55" rx="10" ry="10" style={{fill: 'rgb(255, 143, 143)'}} />
                 
                 <text fill="#000" textLength="140" maxWidth="150" fontSize font-family="Poppins" x="-70" y="-25"> {this.school} </text>
+                */}
+                <image href={`${process.env.PUBLIC_URL + '/assets/' + this.image + '.svg'}`} width="150" height="50" x="-75" y="-55" />
                 </svg>
                :
                null

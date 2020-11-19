@@ -115,11 +115,11 @@ const MapChart = () => {
                         </linearGradient>
                     </defs>
                   
-                        <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+                    <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
                    
                     
                     <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>*/}
-                    <ActionMarker school={school.name}/>
+                    <ActionMarker school={school.name} image={school.mapImg}/>
                     
                     
                 </Marker>
