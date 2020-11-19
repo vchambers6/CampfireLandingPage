@@ -67,10 +67,17 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Poppins',
     textAlign: 'center',
     justifyContent: 'center', alignItems: 'center',
+    
   },
 
+
   slide: {
-    
+    outline: '0 !important',
+      // '&:focus': {
+      //   boxShadow: 'none !important',
+      //   outline: '0 !important',
+      //   outline: 'none',
+      // },
   },
 
   header: {
@@ -105,6 +112,7 @@ const useStyles = makeStyles((theme) => ({
     top: '0', left: '0', right: '0', bottom: '0', 
     position: 'absolute',
     
+    transition: '0.5s',
     '&:hover': {
       color: 'white',
       background: 'rgba(97, 94, 115,0.7)',
@@ -141,6 +149,7 @@ export default function Carousel() {
   return (
     <div className={classes.root}>
       <Slider 
+      className={classes.slider}
       dots
       slidesToShow={1}
       autoplay={true}
@@ -154,10 +163,10 @@ export default function Carousel() {
     >
       {slides.map (slide => {
           return (
-            <div>
+            <div className={classes.slide}>
                 <Grid container item 
                   style={{}}
-                  className={classes.slide}
+                  
                 >
                   <Grid item xs={12}>
                     <Box>
