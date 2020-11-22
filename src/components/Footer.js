@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'; 
-import { Button, Typography } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import Divider from '@material-ui/core/Divider';
 
@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
         margin: 0,
         padding: 0,
         color: 'rgb(48, 46, 65)',
-        marginBottom: '30px',
     },
     section: {
         position: 'static',
@@ -59,7 +58,7 @@ export default function Footer() {
     const classes = useStyles();  
     return (
         
-        <div className={classes.root}>
+        <div className={classes.root} id="footer">
             <Divider classes={{root: classes.dividerColor}} />
             <section className={classes.section}>
                 <div className={classes.content}> 
