@@ -1,13 +1,12 @@
 import React, { useEffect, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Collapse, IconButton, Toolbar, Button, Grid, Divider, Box} from '@material-ui/core';
+import { AppBar, Toolbar, Button, Grid, Divider, Box} from '@material-ui/core';
 import { Link as Scroll} from 'react-scroll'
 import Drawer from './Drawer';
-import HeadMainContent from './HeaderMainContent';
 import HeaderMainContent from './HeaderMainContent';
-import { NearMeSharp } from '@material-ui/icons';
 import Slide from '@material-ui/core/Slide';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import appTheme from '../theme';
 
 const drawerWidth = 240;
 
@@ -19,11 +18,11 @@ const useStyles = makeStyles((theme) => ({
         minHeight: '100vh', 
         fontFamily: 'Poppins',
         width: '100vw',
+        marginBottom: '50px',
     },
     appbar: {
-        background: 'rgba(255, 143, 143, 1)',    
+        background: appTheme.palette.primary.main,    
         position: 'fixed',
-        //height: 50,
         display: 'flex',
         borderBottom: '5em soild white', 
     },
@@ -50,12 +49,9 @@ const useStyles = makeStyles((theme) => ({
           },
     },
     
-    colorText: {
-        color: '#ff9f87',
-    },
     toolBarButtons: {
         color: '#ffffff',
-        fontSize: '1.3rem',
+        fontSize: '1.2rem',
         [theme.breakpoints.down('sm')]: {
             display: 'none',
         },
@@ -64,8 +60,8 @@ const useStyles = makeStyles((theme) => ({
     },
     dividerColor: {
         background: 'rgb(48, 46, 65)',
-        marginLeft: '20px',
-        marginRight: '20px',
+        marginLeft: '25px',
+        marginRight: '25px',
     },
     goDown: {
         color: '#ff9f87', 
@@ -74,9 +70,6 @@ const useStyles = makeStyles((theme) => ({
     mainContent: {
         marginTop: '40px',
     }, 
-    dividerRight: {
-
-    },
 })) 
 
 export default function Header() {

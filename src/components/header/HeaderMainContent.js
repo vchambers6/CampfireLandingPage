@@ -1,8 +1,7 @@
-import React, { useEffect, useState} from 'react';
-import { createMuiTheme, makeStyles, withStyles } from '@material-ui/core/styles';
-import { AppBar, Collapse, IconButton, Typography, Toolbar, Button, Grid, Divider, Box, rgbToHex } from '@material-ui/core';
-import schools from '../../static/schoolsOnboard.json' ;
-import { green, purple, pink} from '@material-ui/core/colors';
+import React from 'react';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { Button, Grid, Box } from '@material-ui/core';
+import schools from '../about/schoolsOnboard.json' ;
 import { Link as Scroll} from 'react-scroll'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
@@ -13,7 +12,6 @@ const campusCount = Object.keys(schools).length
 // register now button 
 const ColorButton = withStyles((theme) => ({
     root: {
-      //color: theme.palette.getContrastText('#ff7070'),
       color: 'rgb(0, 0, 0, 0.5)',
       backgroundColor: 'rgba(255, 112, 112, 0.5)',
       textTransform: 'none', 
@@ -40,16 +38,6 @@ const ColorButton = withStyles((theme) => ({
         
     },
   }))(ExpandMoreIcon);
-
-  const theme = createMuiTheme({
-        palette: {
-          primary: {
-            main: '#ff9999',
-          },
-          secondary: pink,
-        },
-      
-  });
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -95,6 +83,11 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '10px',
         marginTop: '5px',
         marginBottom: '5px',
+    },
+
+    boxes: {
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
    
     learnMoreBox: {
@@ -155,10 +148,11 @@ export default function HeaderMainContent() {
                         alignItems='stretch' 
                         spacing={4} 
                         xs={12}
+                        className={classes.boxes}
                     >
-                        <Grid item xs={6} className={classes.boxes}>
+                        <Grid item xs={6} >
                             <Box display='flex' className={classes.learnMoreBox}> 
-                                <Grid container direction='column' justify='center' alignItems="center" className={classes.boxesText}>
+                                <Grid container direction='row' justify='center' alignItems="center" className={classes.boxesText}>
                                     <Grid item xs={9}>
                                         <Box>Sign up within minutes with your college email.</Box>
                                     </Grid>
@@ -178,7 +172,7 @@ export default function HeaderMainContent() {
                             </Box>
                         </Grid>
                             
-                        <Grid item xs={6} className={classes.boxes}>
+                        <Grid item xs={6}>
                             <Box display='flex' className={classes.learnMoreBox}> 
                                 <Grid container direction='row' justify='center' alignItems="center" className={classes.boxesText}>
                                     <Grid item xs={8}>
