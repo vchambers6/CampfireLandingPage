@@ -1,22 +1,17 @@
 
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-    
-}))
 
 export default class App extends React.Component {
     school = this.props.school; 
     image = this.props.image;
     state = {
-     open: false,
-     hover: false
+        open: false,
+        hover: false
      };
     toggleExpand = () => {
-     this.setState({
-      open: !this.state.open
-     });
+        this.setState({
+            open: !this.state.open
+        });
     };
 
     toggleHover = () => {
@@ -25,7 +20,6 @@ export default class App extends React.Component {
         })
     }
     
-  
     render() {
         var markerStyle; 
         var markerStroke; 
@@ -52,14 +46,12 @@ export default class App extends React.Component {
                 strokeWidth={markerStroke}
                 style={markerStyle}
            />
-           
 
            {this.state.open ?
                 <svg overflow="visible">
                 
                 {/*<path d="M-54,-66 L-50,-63 -46,-66" />
                 <polygon points="-50,-63 -54,-66 -46,-66" style={{fill: 'rgb(0,0,255)'}} />
-                
                 
                 <rect width="150" height="50" x="-75" y="-55" rx="10" ry="10" style={{fill: 'rgb(255, 143, 143)'}} />
                 

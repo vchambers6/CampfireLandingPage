@@ -1,13 +1,11 @@
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Button, Grid, Box } from '@material-ui/core';
-import schools from '../about/schoolsOnboard.json' ;
 import { Link as Scroll} from 'react-scroll'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 /* not sure if we should have this or just hard code the number of schools 
 -- this could unnecessarily slow up the page  */ 
-const campusCount = Object.keys(schools).length
 
 // register now button 
 const ColorButton = withStyles((theme) => ({
@@ -125,7 +123,7 @@ export default function HeaderMainContent() {
             >
                 <Grid item xs={5} md={4} >
                     <div>
-                        <img src={`${process.env.PUBLIC_URL + '/assets/connect.png'}`}  className={classes.connect}></img>
+                        <img src={`${process.env.PUBLIC_URL + '/assets/connect.png'}`}  className={classes.connect} alt="connect-icon"></img>
                     </div>             
                 </Grid>
                 

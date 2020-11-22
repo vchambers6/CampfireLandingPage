@@ -1,6 +1,6 @@
-import React, { useEffect, useState} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Button, Grid, Divider, Box} from '@material-ui/core';
+import { AppBar, Toolbar, Button, Grid, Divider } from '@material-ui/core';
 import { Link as Scroll} from 'react-scroll'
 import Drawer from './Drawer';
 import HeaderMainContent from './HeaderMainContent';
@@ -74,11 +74,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
     const classes = useStyles(); 
-    const [checked,setChecked] = useState(false);  
-    useEffect(()=> {
-        setChecked(true)
-    }, [])
-
     const trigger = useScrollTrigger();
 
     var toolBarItems = [["about", "about"], ["ourTeam", "our team"], ]
@@ -92,7 +87,7 @@ export default function Header() {
                     <Scroll to="header" smooth={true} className={classes.appbarLogo}>
                         <h1>
                             <Button>
-                                <img src={`${process.env.PUBLIC_URL + '/assets/firelogo_purple.png'}`} width='35' height='35'></img>
+                                <img src={`${process.env.PUBLIC_URL + '/assets/firelogo_purple.png'}`} width='35' height='35' alt="campfire-appbar-icon"/>
                             </Button>
                         </h1>
                     </Scroll>

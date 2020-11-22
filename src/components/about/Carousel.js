@@ -185,7 +185,7 @@ export default function Carousel() {
                             <span className={classes.imgWrapper}>
                               <img src={`${process.env.PUBLIC_URL + '/assets/' + slide.name + '.svg'}`} 
                               className={classes.screenshot}
-                              
+                              alt="carousel-slide"
                               />
                             </span>
                               <span className={classes.textBox} >

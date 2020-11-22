@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     },
     section: {
         position: 'static',
-        height: "10vh",
         height: '100%',
         width: "100%",
         content: '', 
@@ -44,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
     },
     mailIcon: {
         fontSize: '2rem',
-
     },
 
     dividerColor: {
@@ -67,7 +65,7 @@ export default function Footer() {
                             href={`mailto:info@campfireconvos.com?subject=Campfire Convos Inquiry`}
                             target="_top"
                             rel="noopener noreferrer"
-                            style={{fontFamily: 'Poppins', textTransform: 'none', color: 'rgb(48, 46, 65)', fontSize: '1.5rem', fontFamily: 'Poppins'}}
+                            style={{textTransform: 'none', color: 'rgb(48, 46, 65)', fontSize: '1.5rem', fontFamily: 'Poppins'}}
                         >
                             <MailOutlineIcon classes={{root: classes.mailIcon}}/>
                         </Button>

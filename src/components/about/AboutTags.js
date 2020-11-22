@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '2rem',
         color: 'rgb(0,0,0,1)',
         fontWeight: 'bold',
-        lineHeight: '99%', 
         lineHeight: .9,
         },
     section: {

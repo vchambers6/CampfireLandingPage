@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles, withStyles } from '@material-ui/core/styles'; 
+import { makeStyles } from '@material-ui/core/styles'; 
 import { Grid, Box, Divider} from '@material-ui/core';
 
 
@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
     subtitle: {
         fontSize: '1.5rem',
         lineHeight: '99%', 
-        // padding: '2px',
         [theme.breakpoints.down('xs')]: {
             fontSize: '1rem',
         },
@@ -24,25 +23,13 @@ const useStyles = makeStyles((theme) => ({
 
     subtext: {
         fontSize: '1rem',
-        //lineHeight: '99%', 
-        //padding: '2px',
-        //lineHeight: 1.1,
         [theme.breakpoints.down('xs')]: {
             display: 'none',
         },
     },
 
     box: {
-        //maxWidth: '40rem',
-
         width: '100%',
-        // height: '100%',
-        // borderRadius: '10px', 
-        // padding: '20px',
-        // marginLeft: 'auto',
-        // marginRight: 'auto',
-        // marginTop: '0',
-        // marginBottom: '0',
     },
     icon: {
         width: '100%',
@@ -69,7 +56,7 @@ export default function() {
                
                 <Grid item xs={3}>
                     <Box className={classes.box}>
-                        <img src={`${process.env.PUBLIC_URL + '/assets/About_1.svg'}`} className={classes.icon}></img>
+                        <img src={`${process.env.PUBLIC_URL + '/assets/About_1.svg'}`} className={classes.icon} alt="girl-doing-schoolwork"/>
                     </Box>
                 </Grid>
 
@@ -104,7 +91,7 @@ export default function() {
 
                 <Grid item xs={3}>
                     <Box className={classes.box}>
-                        <img src={`${process.env.PUBLIC_URL + '/assets/About_2.svg'}`} className={classes.icon}/>
+                        <img src={`${process.env.PUBLIC_URL + '/assets/About_2.svg'}`} className={classes.icon} alt="online-communication-icon"/>
                     </Box>
                 </Grid>
             </Grid>
@@ -115,7 +102,7 @@ export default function() {
                
                 <Grid item xs={3}>
                     <Box className={classes.box}>
-                        <img src={`${process.env.PUBLIC_URL + '/assets/About_3.svg'}`} className={classes.icon}/>
+                        <img src={`${process.env.PUBLIC_URL + '/assets/About_3.svg'}`} className={classes.icon} alt="online-friends-icon"/>
                     </Box>
                 </Grid>
 

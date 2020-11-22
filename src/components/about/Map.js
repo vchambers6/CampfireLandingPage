@@ -10,18 +10,6 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import schools from "./schoolsOnboard.json";
 import ActionMarker from "./ActionMarker";
 
-const InteractiveMarker = withStyles((theme) => ({
-    style: {
-
-    },
-    '&:hover': {
-        backgroundColor: '#000',
-        color: '#fff', 
-      },
-
-}))(Marker); 
-
-
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
 const offsets = {
@@ -40,14 +28,10 @@ const useStyles = makeStyles((theme) => ({
     root: {
     },
     map: {
-        //justifyContent: 'center', 
-        //alignItems: 'center', 
         backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/MapBG.png"})`,
         backgroundColor: 'rgba(255,255,255,0.5)', 
         backgroundBlendMode: 'lighten', // changes opacity of background image. 
         backgroundRepeat: 'no-repeat',
-        //backgroundSize: '840px',
-        backgroundPosition: 'center',
         backgroundSize: '100%',
         backgroundPosition: 'left 40% bottom 57%',
     },

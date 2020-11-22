@@ -1,6 +1,6 @@
 import React from 'react'
-import { makeStyles, withStyles } from '@material-ui/core/styles'; 
-import { Grid, Box, Button, Divider } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles'; 
+import { Grid, Box, Divider } from '@material-ui/core';
 import AboutTags from './AboutTags';
 import Map from './Map';
 import schools from "./schoolsOnboard.json";
@@ -11,20 +11,6 @@ import { Link as Scroll} from 'react-scroll'
 
 
 var schoolsOnBoard = Object.keys(schools).length
-
-const ColorButton = withStyles((theme) => ({
-    root: {
-      color: theme.palette.getContrastText('#ff7070'),
-      backgroundColor: 'rgba(255, 112, 112, 0.5)',
-      textTransform: 'none', 
-      '&:hover': {
-        backgroundColor: 'rgb(255, 143, 143)',
-        color: '#fff', 
-      },
-      display: 'flex',
-      marginTop: '8px',
-    },
-  }))(Button);
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -49,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
         lineHeight: '99%', 
         padding: '2px',
-        // lineHeight: .9,
     },
 
     subtext: {
@@ -58,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
         color: 'rgb(0,0,0,1)',
         lineHeight: '99%', 
         padding: '2px',
-        lineHeight: 1.1,
     },
 
     box: {
@@ -245,7 +229,7 @@ export default function() {
                     </Grid>
                     */}
                     <Grid item xs={12} md={3}>
-                        <span style={{fontSize: '2rem', fontWeight: 'bold'}}>live at 3 schools and counting. </span>
+                        <span style={{fontSize: '2rem', fontWeight: 'bold'}}>live at {schoolsOnBoard} schools and counting. </span>
                         <br/>
                         <br/>
                         <span style={{fontSize: '1rem'}} className={classes.mapSubText}> don't see your school? <br/>
