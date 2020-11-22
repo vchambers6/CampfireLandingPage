@@ -1,7 +1,6 @@
 
-import React, { useEffect, useState} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { School } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     
@@ -47,7 +46,7 @@ export default class App extends React.Component {
                </linearGradient>
             </defs> */}
             
-           <ellipse x="50%" y="50%" rx="8" ry="8"  
+           <ellipse x="50%" y="50%" rx="10" ry="10"  
                 onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}
                 stroke="rgba(255,255,255, 0.3)"
                 strokeWidth={markerStroke}
