@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider from 'infinite-react-carousel';
-import { CssBaseline, Grid, Box, Typography, Button } from '@material-ui/core';
+import { Grid, Box, Typography } from '@material-ui/core';
 import { makeStyles, withStyles } from '@material-ui/core/styles'; 
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -9,10 +9,8 @@ const slides = [
   {name: "Carousel_1", 
    header: "Find your communities.", 
    detail: 
-            `Discover family and mentors in 
-            areas where you thought you were alone. 
-            Discover individuals who share your 
-            struggles or your quirkiest combination of interests.
+            `Choose from > 1000 tags that reflect your identity, 
+            spark your curiosity, and push you towards your goals.
             `
   },
 
@@ -20,11 +18,8 @@ const slides = [
    header: "Expand your horizons.", 
    detail: 
             `
-            Encounter people and stories 
-            that are vastly different from 
-            you but still somehow similar. 
-            Learn about new areas and how 
-            they connect with your existing passions.
+            Encounter people and stories that are vastly different from you, 
+            and find solidarity among others with even the most niche topics.
             `
   },
 
@@ -33,7 +28,7 @@ const slides = [
    detail: 
             `
             Easily find, communicate, 
-            and organize with others who are 
+            and organize with people who are 
             working towards similar causes.
 
             `
@@ -49,6 +44,9 @@ const arrowstyles = {
     display: 'flex',
     alignItems: 'center',
     height: '100%',
+
+
+
 }}
 
 const CustomPrevArrow = withStyles((theme) => (
@@ -80,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   header: {
-    fontSize: '2.5rem',
+    fontSize: '2rem',
     color: 'black',
     fontWeight: 'bold',
     lineHeight: '99%', 
