@@ -12,7 +12,7 @@ import { Link as Scroll} from 'react-scroll'
 const useStyles = makeStyles({
   list: {
     width: 250,
-    background: '#ff9999',
+    background: 'rgba(255, 143, 143, 1)',
     
   },
   fullList: {
