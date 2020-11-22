@@ -32,15 +32,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Chips({tags, chipStyle}) {
   const classes = useStyles();
-
-  const handleDelete = () => {
-    console.info('You clicked the delete icon.');
-  };
-
-  const handleClick = () => {
-    console.info('You clicked the Chip.');
-  };
-
   
   return (
     <div className={classes.root}>
@@ -57,7 +48,6 @@ export default function Chips({tags, chipStyle}) {
                 icon={<Icon className={classes.icon} style={{backgroundColor: tag.color}}/>}
                 label={tag.title}
                 style={{fontFamily: 'Poppins'}}
-                onClick={handleClick}
             />     
            )
             
