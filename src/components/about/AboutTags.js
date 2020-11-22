@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'; 
-import { CssBaseline, Grid, Box } from '@material-ui/core';
-import landingPageTags from "../../static/landingPageTags";
+import { Grid } from '@material-ui/core';
+import landingPageTags from "./landingPageTags";
 import TagArray from '../TagArray';
 
 
@@ -11,10 +11,10 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex', 
         justifyContent: 'center', 
         alignItems: 'left', 
-        textAlign: 'left',
-        paddingLeft: '50px',
         textAlign: 'center',
         color: 'black',
+        marginLeft: 'auto',
+        marginRight: 'auto',
         //marginBottom: '-5rem',   
     },
 
@@ -30,9 +30,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '2rem',
         color: 'rgb(0,0,0,1)',
         fontWeight: 'bold',
-        color: 'rgb(255, 143, 143,1)',
         lineHeight: '99%', 
-        padding: '15px',
         lineHeight: .9,
         },
     section: {
