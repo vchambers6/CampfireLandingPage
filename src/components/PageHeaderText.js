@@ -1,16 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'; 
-import { Button, Typography, Grid } from '@material-ui/core';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import Divider from '@material-ui/core/Divider';
-
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        // display: 'block',
-        // textAlign: 'center',
-        // overflow: 'hidden',
-        // whiteSpace: 'nowrap',
         width: '90vw',
         textAlign: 'center',
         alignItems: 'center', 
@@ -21,10 +13,9 @@ const useStyles = makeStyles((theme) => ({
         
     },
     border: {
-        borderBottom: "2px solid lightgray",
+        borderBottom: "3px solid lightgray",
         width: "100%"
     },
-
     title: {
         weight: '400',
         color: 'rgb(255, 143, 143,1)',
