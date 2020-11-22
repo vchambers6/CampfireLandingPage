@@ -1,12 +1,13 @@
 import React from 'react'
 import { makeStyles, withStyles } from '@material-ui/core/styles'; 
-import { MovieFilter } from '@material-ui/icons';
-import { CssBaseline, Grid, Box, Typography, Button } from '@material-ui/core';
+import { Grid, Box, Button, Divider } from '@material-ui/core';
 import AboutTags from './AboutTags';
-import Map from './MapTest3';
-import schools from "../../static/schoolsOnboard.json";
+import Map from './Map';
+import schools from "./schoolsOnboard.json";
 import Carousel from "./Carousel";
 import PageHeaderText from "../PageHeaderText";
+import AboutExamples from "./AboutExamples";
+import { Link as Scroll} from 'react-scroll'
 
 
 var schoolsOnBoard = Object.keys(schools).length
@@ -36,13 +37,13 @@ const useStyles = makeStyles((theme) => ({
             flexDirection: 'column', 
         },
         textAlign: 'center',
+        marginBottom: '50px', 
         // padding: '10px',
     },
 
     
 
     subtitle: {
-        fontFamily: 'Poppins',
         fontSize: '1.5rem',
         color: 'rgb(0,0,0,1)',
         fontWeight: 'bold',
@@ -80,6 +81,11 @@ const useStyles = makeStyles((theme) => ({
         alignContent: 'center',
     },
 
+    mapContainer: {
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
+
     mapText: {
         color: 'black',
         fontSize: '3vw', 
@@ -87,11 +93,16 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '30px',
         paddingBottom: '30px',
     }, 
-
-    mapContainer: {
-        marginLeft: '3rem',
-        marginRight: 'auto',
-    }
+    mapSubText: {
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        },
+    },
+    divider: {
+        backgroundColor: '#FF8F8F',
+        height: 1,
+        margin: '50px',
+    },
 }))
 
 export default function() {
@@ -112,17 +123,21 @@ export default function() {
                      <PageHeaderText header={header}/>
                     
 
-                <p style={{padding: '1.5rem', marginLeft: '2rem', marginRight: '2rem', marginBottom: '0px', backgroundColor: 'rgb(255, 143, 143, 0.5)', borderRadius: '5px'}} 
-                    className={classes.subtext}>
-                    No matter what your goal is, 
-                    Campfire will connect you with the precise and necessary support to make it happen. 
-                    Below are but a few examples.
+                    <p style={{padding: '1.5rem', marginLeft: '2rem', marginRight: '2rem', marginBottom: '0px', backgroundColor: '#D5D2E2', borderRadius: '5px'}} 
+                        className={classes.subtext}>
+                        No matter what your goal is, 
+                        Campfire will connect you with the precise and necessary support to make it happen. 
+                        Below are but a few examples.
 
-                </p>
+                    </p>
 
                 </Grid>
-                
 
+                <Grid item container xs={12} justify='center'>
+                    <AboutExamples />
+                </Grid>
+                
+               {/*  MOVED THIS TO ABOUTEXAMPLES.JS TO DECREASE FILE LENGTH 
                 <Grid container item xs={12} justify='center' alignItems='center' spacing={2} style={{padding:'10px'}}>
                     <Grid item xs={5}>
                         <Box className={classes.box} style={{marginRight: '5px'}}>
@@ -151,9 +166,10 @@ export default function() {
                         </Box>
                     </Grid>
                 </Grid>
+                */}
 
         
-                
+                {/* VANESSA: I replaced this with <Divider /> 
                 <Grid item xs={12} md={6} style={{padding: '0'}}>
                     <Box>
                     <div style={{paddingBottom: '20px'}}><hr
@@ -165,24 +181,29 @@ export default function() {
                         }}/></div>
                     </Box>
                 </Grid>
+                */}
+
+                <Divider classes={{root: classes.divider}} style={{width: '70%',}}/>
                 
                 <Grid container item xs={12}>
-                <Grid item xs={2}/>
-                <Grid item xs={8}>
-                    <Box>
-                       <Carousel />
-                    </Box>
-                </Grid>
-
-                <Grid item xs={2}/>
+                    <Grid item xs={2}/>
+                        <Grid item xs={8}>
+                            <Box>
+                            <Carousel />
+                            </Box>
+                        </Grid>
+                    <Grid item xs={2}/>
                 </Grid>
                 
 
+                
+
+                {/* Vanessa: I commented these out because I think the carousel can convey this info, lmk what you think 
+                
                 <Typography className={classes.subtitle}>
                     Get Started
                 </Typography>
-
-                {/* Graphics */}
+                
                 <Grid container item xs={12} justify='center' alignItems='center' spacing={3} style={{padding:'10px'}}>
                     <Grid item xs={3}>
                         <Box className={classes.box}>
@@ -205,19 +226,17 @@ export default function() {
                         </Box>
                     </Grid>
                 </Grid>
-
-                <Grid item xs={12}  id="aboutTags">
-                    <hr
-                        style={{
-                            color: '#FF8F8F',
-                            backgroundColor: '#FF8F8F',
-                            height: 5,
-                            width: '80%',
-                            }}/>
+                */}
+                
+                <Grid item xs={12} id="aboutTags" className={classes.aboutTags}>
                     <AboutTags />              
                 </Grid>
 
-                <Grid item container className={classes.mapContainer} alignItems='center' spacing={4} xs={12}> 
+                <Divider classes={{root: classes.divider}} style={{width: '70%',}}/>
+
+                
+
+                <Grid item container className={classes.mapContainer} alignItems='center' justify='center' spacing={0} xs={12}> 
 
                     {/*<Grid item xs={12} className={classes.mapText}>
                         <span > <b> Enriching campus communities. </b> </span>
@@ -225,10 +244,22 @@ export default function() {
 
                     </Grid>
                     */}
-                    <Grid item xs={10} md={8}>
+                    <Grid item xs={12} md={3}>
+                        <span style={{fontSize: '2rem', fontWeight: 'bold'}}>live at 3 schools and counting. </span>
+                        <br/>
+                        <br/>
+                        <span style={{fontSize: '1rem'}} className={classes.mapSubText}> don't see your school? <br/>
+                            <Scroll to="footer" smooth={true}>
+                                <u>contact us.</u>
+                           
+                            </Scroll>
+                        </span>
+                    </Grid>
+                    <Grid item xs={12} md={8}>
                         {/*<img src={`${process.env.PUBLIC_URL + '/assets/map.png'}`}  className={classes.connect}></img> */}
                         <Map />
                     </Grid>
+                    {/* VANESSA: Commented schools box out 
                     <Grid item xs={6} md={3}
                            style={{backgroundColor: 'rgb(255, 143, 143, 0.5)',
                                 textAlign:'left',
@@ -261,6 +292,7 @@ export default function() {
                         </Grid>
 
                     </Grid>
+                    */}
                 </Grid>
 
                 
