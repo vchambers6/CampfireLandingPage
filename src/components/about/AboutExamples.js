@@ -75,7 +75,7 @@ export default function() {
             <Divider classes={{root: classes.divider}} />
 
             <Grid item container xs={12} justify='center' alignItems='center' spacing={8}>
-                <Grid item xs={6} width="100%" style={{textAlign: 'right'}}>
+                <Grid item xs={6} width="100%" style={{textAlign: 'left'}}>
                     <Box className={classes.box}>
                         <p className={classes.subtitle}><span style={{fontWeight: 'bold'}}>Faster outreach:</span>  Stop emailing 15 listservs to publicize an event.</p>
                         <p className={classes.subtext}>
